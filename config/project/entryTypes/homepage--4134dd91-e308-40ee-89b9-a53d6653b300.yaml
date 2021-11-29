@@ -53,6 +53,19 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: ec7805c6-51dc-48ef-a748-146143194069 # Featured Story
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Featured Story'
+        sortOrder: 3
+      -
+        elements:
+          -
             fieldUid: dcf9bd2a-2312-46cc-8f42-b40eca85114b # Riders Intro
             instructions: null
             label: null
@@ -71,7 +84,7 @@ fieldLayouts:
             warning: null
             width: 100
         name: Riders
-        sortOrder: 3
+        sortOrder: 4
 handle: homepage
 hasTitleField: false
 name: Homepage

@@ -1,4 +1,4 @@
-dateModified: 1638196347
+dateModified: 1638199014
 email:
   fromEmail: k@k.com
   fromName: craft
@@ -34,6 +34,7 @@ meta:
     e85740d8-bfa4-47cd-a112-9fb618b67d60: 'Hero Title' # Hero Title
     e1000611-2036-491e-b593-0be824079ea7: Description # Description
     eb7f7c5c-ef6d-4d9c-96cd-39d2cea7caf3: 'Rich Text' # Rich Text
+    ec7805c6-51dc-48ef-a748-146143194069: 'Featured Story' # Featured Story
     f6c64b69-ed18-4ed6-aaa5-2235df4ba4c0: 'Stories Listing' # Stories Listing
     f6f30a37-abbd-422a-9b05-b57ba57971dd: Riders # Riders
     f942dd7b-efac-49a7-a756-dae7bea9d49c: 'Full name' # Full name

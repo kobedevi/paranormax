@@ -8,8 +8,7 @@
             <img src="{{ siteUrl }}assets/images/arrow-next.svg" alt="Next" />
         </button>
     </div>
-
-        
+  
     <div class="slider__reel">
         {% for photo in photos %}
             <img src="{{ photo.getUrl({ width:1200, quality:70 }) }}" alt="{{ photo.title }}" class="slider__image" />
