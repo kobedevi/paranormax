@@ -16,10 +16,14 @@
                     </button>
 
                     <nav class="nav">
+
                         {% set menu = header.menu.all() %}
-                        {% for menuItem in menu %}                        
-                            <a href="{{ menuItem.entry.one().url }}" class="nav__link">{{ menuItem.label }}</a>
+                        {% for menuItem in menu %}
+                            {% set destination = menuItem.entry.one() %}
+                            {% set activeLink = (craft.app.request.segments|first == destination.uri) or (craft.app.request.segments|first == false and destination.uri == '__home__') %}                   
+                            <a href="{{ destination.url }}" class="nav__link {{ activeLink  ? 'nav__link--active' }}">{{ menuItem.label }}</a>
                         {% endfor %}
+
                     </nav>
                 </div>
             </header>
