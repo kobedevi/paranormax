@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+propagationMethod: all
+siteSettings:
+  6dc508a7-7121-4dd3-a83e-4ca13c7b7ebf: # craft
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/page
+    uriFormat: '{slug}'
+structure:
+  maxLevels: 3
+  uid: 04646d9a-5ee3-458b-87dd-95212f3157c9
+type: structure
