@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: b4956736-e777-44e6-8028-a77989e0652c # Stories
+handle: slider
+instructions: ''
+name: Slider
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:c71752a5-03bb-44e0-b7cc-ab999a652db5' # uploads
+  defaultUploadLocationSubpath: ''
+  limit: '5'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: ''
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:c71752a5-03bb-44e0-b7cc-ab999a652db5' # uploads
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:c71752a5-03bb-44e0-b7cc-ab999a652db5' # uploads
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

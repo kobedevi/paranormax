@@ -1,0 +1,19 @@
+columnSuffix: ibhwlpqy
+contentColumnType: text
+fieldGroup: b4956736-e777-44e6-8028-a77989e0652c # Stories
+handle: excerpt
+instructions: ''
+name: Excerpt
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,1 +1,16 @@
-detail story
+{% extends "_layouts/site" %}
+
+{% block content %}
+    <article class="section">
+        <div class="content-column content-column--narrow">
+            <h1 class="centered">{{ entry.title }}</h1>
+
+            {% include "_includes/components/slider" with {
+                photos: entry.slider.all()
+            } %}
+
+            {{ entry.richText }}
+
+        </div>
+    </article>
+{% endblock %}
