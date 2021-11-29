@@ -1,0 +1,76 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+
+    <section class="hero" style="background-image: url('{{ siteUrl }}assets/images/photos/hero.jpg')">
+        <div class="hero__content content-column">
+            <h1>Motorcycle Stories, Lifestyle, and Gear</h1>
+        </div>
+    </section>
+
+    <section class="featured-story">
+        <div class="featured-story__flex content-column">
+            <div class="featured-story__content">
+            <h2>Exporing Peru by Motorbike</h2>
+
+            <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum.
+            </p>
+
+            <p>
+                <a href="{{ siteUrl }}story.html" class="cta-link">Discover the full story</a>
+            </p>
+            </div>
+
+            <div class="featured-story__slider">
+            <!-- Slider Component -->
+            <div class="slider">
+                <div class="slider__nav">
+                <button type="button" class="slider__prev">
+                    <img src="{{ siteUrl }}assets/images/arrow-prev.svg" alt="Previous" />
+                </button>
+                <button type="button" class="slider__next">
+                    <img src="{{ siteUrl }}assets/images/arrow-next.svg" alt="Next" />
+                </button>
+                </div>
+
+                <div class="slider__reel">
+                <img src="{{ siteUrl }}assets/images/photos/mohit-suthar-a1_tFcBSp7w-unsplash.jpg" alt="Ridge" class="slider__image" />
+                <img src="{{ siteUrl }}assets/images/photos/mountains.jpg" alt="Mountains" class="slider__image" />
+                <img src="{{ siteUrl }}assets/images/photos/photo-1606293715325-9329879fec0f.jpg" alt="Jungle" class="slider__image" />
+                <img src="{{ siteUrl }}assets/images/photos/jeremy-bishop-hMHJYQlWQwU-unsplash.jpg" alt="Scrambler" class="slider__image" />
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--more-padding section--light section--angled-top">
+        <div class="content-column centered">
+            <h2>Meet the Riders</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+            <div class="flex-columns">
+            <div class="flex-columns__item">
+                <img src="{{ siteUrl }}assets/images/photos/henry-potter.jpg" alt="Henry Potter" class="flex-columns__image" />
+                <h4>Henry Potter</h4>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            </div>
+
+            <div class="flex-columns__item">
+                <img src="{{ siteUrl }}assets/images/photos/sarah-bradbury.jpg" alt="Sarah Bradbury" class="flex-columns__image" />
+                <h4>Sarah Bradbury</h4>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            </div>
+
+            <div class="flex-columns__item">
+                <img src="{{ siteUrl }}assets/images/photos/jack-starfield.jpg" alt="Jack Starfield" class="flex-columns__image" />
+                <h4>Jack Starfield</h4>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

@@ -1,0 +1,19 @@
+columnSuffix: qctfffhb
+contentColumnType: text
+fieldGroup: 5ae12145-f2f1-4f09-9392-4a0c741f22e1 # Homepage
+handle: heroTitle
+instructions: ''
+name: 'Hero Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

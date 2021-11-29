@@ -1,0 +1,49 @@
+dateModified: 1637001813
+email:
+  fromEmail: k@k.com
+  fromName: craft
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4bf2ad6e-9f75-4c6c-b074-80ea4d2b9e4e: Riders # Riders
+    5ae12145-f2f1-4f09-9392-4a0c741f22e1: Homepage # Homepage
+    5d2e79d0-dcb9-4041-be44-ba6595ad0218: Footer # Footer
+    6cff1681-be7f-444d-a4ec-134bdddf2bcb: Disclaimer # Disclaimer
+    6dc508a7-7121-4dd3-a83e-4ca13c7b7ebf: craft # craft
+    18fddde8-8d22-41f5-b174-2f65ed065208: craft # craft
+    87cbed4b-3205-494e-8ef6-07cbed915476: 'Hero Image' # Hero Image
+    4134dd91-e308-40ee-89b9-a53d6653b300: Homepage # Homepage
+    42059e8b-f8c4-44e7-a634-f1cd147d293e: Homepage # Homepage
+    60092684-f936-4ff9-add1-592eb66586d3: Default # Default
+    b4c67b5a-c048-4b6f-918e-cc4b7167d5bd: Common # Common
+    bc0a3031-c5b2-41b7-8733-99456d941bfb: Image # Image
+    c3637e52-cfaa-4ad8-a366-953b89ecf1dd: Stories # Stories
+    c71752a5-03bb-44e0-b7cc-ab999a652db5: uploads # uploads
+    c9722906-68da-4e72-a1b9-fd1f9a254bad: Footer # Footer
+    dcf9bd2a-2312-46cc-8f42-b40eca85114b: 'Riders Intro' # Riders Intro
+    e85740d8-bfa4-47cd-a112-9fb618b67d60: 'Hero Title' # Hero Title
+    e1000611-2036-491e-b593-0be824079ea7: Description # Description
+    f6f30a37-abbd-422a-9b05-b57ba57971dd: Riders # Riders
+    f942dd7b-efac-49a7-a756-dae7bea9d49c: 'Full name' # Full name
+plugins:
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+system:
+  edition: solo
+  live: true
+  name: craft
+  retryDuration: null
+  schemaVersion: 3.7.8
+  timeZone: Europe/Brussels
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

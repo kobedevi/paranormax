@@ -1,0 +1,29 @@
+columnSuffix: rlqlslrn
+contentColumnType: text
+fieldGroup: 5ae12145-f2f1-4f09-9392-4a0c741f22e1 # Homepage
+handle: ridersIntro
+instructions: ''
+name: 'Riders Intro'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes:
+    - c71752a5-03bb-44e0-b7cc-ab999a652db5 # uploads
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

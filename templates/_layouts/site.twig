@@ -1,0 +1,37 @@
+{% extends "_layouts/base" %}
+
+{% block body %}
+
+    <body class="home-page">
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__content content-column">
+                    <a href="{{ siteUrl }}" class="logo">
+                        <img src="{{ siteUrl }}assets/images/logo.svg" alt="Motoventure" />
+                    </a>
+
+                    <button type="button" class="nav-toggle">
+                        <img src="{{ siteUrl }}assets/images/list.svg" alt="Menu" class="icon-open-menu" />
+                        <img src="{{ siteUrl }}assets/images/x.svg" alt="Close Menu" class="icon-close-menu" />
+                    </button>
+
+                    <nav class="nav">
+                        <a href="stories.html" class="nav__link">Stories</a>
+                        <a href="gear.html" class="nav__link">Our Gear</a>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        {% block content %}{% endblock %}
+
+        <footer class="footer">
+            <div class="content-column centered">
+                <p>{{footer.disclaimer|raw}}</p>
+            </div>
+        </footer>
+
+        <script src="{{ siteUrl }}assets/js/scripts.js"></script>
+    </body>
+
+{% endblock %}
