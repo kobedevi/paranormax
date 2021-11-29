@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: b4956736-e777-44e6-8028-a77989e0652c # Stories
+fieldGroup: b4c67b5a-c048-4b6f-918e-cc4b7167d5bd # Common
 handle: slider
 instructions: ''
 name: Slider
@@ -17,7 +17,7 @@ settings:
   previewMode: full
   restrictFiles: '1'
   selectionLabel: ''
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:c71752a5-03bb-44e0-b7cc-ab999a652db5' # uploads
