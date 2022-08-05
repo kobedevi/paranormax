@@ -2,6 +2,7 @@
   "require": {
     "craftcms/cms": "^3.6.4",
     "craftcms/redactor": "2.8.8",
+    "jamesedmonston/graphql-authentication": "^1.10",
     "studioespresso/craft-dumper": "2.0.0",
     "vlucas/phpdotenv": "^3.4.0"
   },

@@ -1,9 +1,8 @@
 baseUrl: $PRIMARY_SITE_URL
-enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: craft
+name: paranormax
 primary: true
-siteGroup: 18fddde8-8d22-41f5-b174-2f65ed065208 # craft
+siteGroup: ef2003a7-8d54-4878-abdd-dd55e978fa1a # paranormax
 sortOrder: 1

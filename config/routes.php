@@ -19,5 +19,5 @@
  */
 
 return [
-
+    'real-private-api-cmsdev' => 'graphql/api'
 ];
