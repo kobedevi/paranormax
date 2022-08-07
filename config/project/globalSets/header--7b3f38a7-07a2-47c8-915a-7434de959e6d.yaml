@@ -1,0 +1,19 @@
+fieldLayouts:
+  2cce5fe3-0600-4d7d-9df8-840df41e90a8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: da009cfa-0fb2-4b88-8dc2-b36ecefb962e # Menu Items
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Navigation
+        sortOrder: 1
+handle: header
+name: Header
+sortOrder: 1
