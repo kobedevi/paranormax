@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: missions
+name: Missions
+propagationMethod: all
+siteSettings:
+  1cdca378-0f6c-4a06-b46c-8edd246da02c: # paranormax
+    enabledByDefault: true
+    hasUrls: true
+    template: missions/index.twig
+    uriFormat: missions
+type: channel

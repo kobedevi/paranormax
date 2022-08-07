@@ -1,0 +1,69 @@
+fieldLayouts:
+  20d84af7-b25e-4222-b969-7e23dbc0c927:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 992931b0-e2e5-473c-86c3-ff828afe1633 # Mission Title
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a1daf1c7-669c-4119-bf91-d436d5899cfd # Mission Status
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ca1f8b86-1417-4253-b735-8b94c98fe351 # Tag Field
+            instructions: ''
+            label: 'Mission Tags'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e87e65cf-3015-436b-8b7a-7c794debe425 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a0e0e62e-c5e2-4764-9bc2-139c94fd83b7 # Deadline
+            instructions: ''
+            label: Deadline
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3f435d06-03ff-4ae1-ba1a-3bb6b1dd1237 # Assigned to
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: default
+hasTitleField: false
+name: Default
+section: 77e7f0e9-1c1e-4782-a7aa-85f4edc6819a # Missions
+sortOrder: 1
+titleFormat: '{missionTitle}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

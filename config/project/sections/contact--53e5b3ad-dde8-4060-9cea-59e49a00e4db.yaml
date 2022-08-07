@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: contact
+name: Contact
+propagationMethod: all
+siteSettings:
+  1cdca378-0f6c-4a06-b46c-8edd246da02c: # paranormax
+    enabledByDefault: true
+    hasUrls: true
+    template: contact/index.twig
+    uriFormat: contact
+type: single

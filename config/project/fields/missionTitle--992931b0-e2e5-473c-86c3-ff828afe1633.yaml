@@ -1,0 +1,19 @@
+columnSuffix: phjqfazh
+contentColumnType: string(200)
+fieldGroup: 38a1184a-1381-426c-a931-63707475a816 # Mission
+handle: missionTitle
+instructions: ''
+name: 'Mission Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 50
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: Title
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

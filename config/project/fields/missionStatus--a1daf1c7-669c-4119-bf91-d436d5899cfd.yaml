@@ -1,0 +1,79 @@
+columnSuffix: boieyfrg
+contentColumnType: string
+fieldGroup: 38a1184a-1381-426c-a931-63707475a816 # Mission
+handle: missionStatus
+instructions: ''
+name: 'Mission Status'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Draft
+        -
+          - value
+          - draft
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Searching
+        -
+          - value
+          - searching
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Pending
+        -
+          - value
+          - pending
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Accepted
+        -
+          - value
+          - accepted
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Success
+        -
+          - value
+          - success
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Failed
+        -
+          - value
+          - failed
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

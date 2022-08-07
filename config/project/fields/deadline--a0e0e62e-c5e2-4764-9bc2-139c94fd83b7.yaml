@@ -1,0 +1,17 @@
+columnSuffix: xmeemtea
+contentColumnType: datetime
+fieldGroup: 38a1184a-1381-426c-a931-63707475a816 # Mission
+handle: deadline
+instructions: ''
+name: Deadline
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

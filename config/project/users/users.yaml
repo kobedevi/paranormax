@@ -1,0 +1,7 @@
+allowPublicRegistration: true
+defaultGroup: fa76bb61-2adf-4be8-8d1f-ada647f07809 # Members
+photoSubpath: profilePicture/
+photoVolumeUid: d05f331b-a986-43d1-b531-24faf2fe66ab # Uploads
+requireEmailVerification: false
+suspendByDefault: false
+validateOnPublicRegistration: false

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: login
+name: Login
+propagationMethod: all
+siteSettings:
+  1cdca378-0f6c-4a06-b46c-8edd246da02c: # paranormax
+    enabledByDefault: true
+    hasUrls: true
+    template: _login/index.twig
+    uriFormat: login
+type: single

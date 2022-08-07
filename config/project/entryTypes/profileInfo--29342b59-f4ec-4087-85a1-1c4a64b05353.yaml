@@ -1,0 +1,38 @@
+fieldLayouts:
+  d5bd5946-cc9e-4d91-b5a4-5a20e8f13e59:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: profileInfo
+hasTitleField: false
+name: 'Profile Info'
+section: 27081b30-a9b1-43d4-94c5-60e38c61b511 # Profile Info
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

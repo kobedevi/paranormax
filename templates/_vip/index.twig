@@ -1,0 +1,13 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+{% set usersIds = entry.usersField.ids %} 
+<pre>
+    {{ dump(usersIds) }}
+</pre>
+<section class="inner-page">
+    <div class="container">
+        <p>vip here</p>
+    </div>
+</section>
+{% endblock %}

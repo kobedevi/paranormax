@@ -28,18 +28,18 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 2fdb9298-e860-4b44-853e-b8b21a2ff63f # Hero Image
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: c9730088-a7be-44cb-b088-f2b502b271b5 # Hero Title
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

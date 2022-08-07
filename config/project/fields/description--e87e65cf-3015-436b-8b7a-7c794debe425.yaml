@@ -1,0 +1,19 @@
+columnSuffix: bbzirfwh
+contentColumnType: string(2000)
+fieldGroup: 38a1184a-1381-426c-a931-63707475a816 # Mission
+handle: description
+instructions: ''
+name: Description
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 500
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

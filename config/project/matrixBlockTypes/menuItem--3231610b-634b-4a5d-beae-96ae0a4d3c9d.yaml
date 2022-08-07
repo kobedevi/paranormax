@@ -51,7 +51,7 @@ fields:
     columnSuffix: null
     contentColumnType: string(80)
     fieldGroup: null
-    handle: menu
+    handle: menuLabel
     instructions: ''
     name: 'Menu Label'
     searchable: false
