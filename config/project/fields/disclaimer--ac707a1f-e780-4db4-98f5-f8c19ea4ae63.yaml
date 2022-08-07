@@ -1,0 +1,19 @@
+columnSuffix: plsqryuf
+contentColumnType: text
+fieldGroup: 7f93787d-3ac0-4256-95b9-a0dfdefff70a # Footer
+handle: disclaimer
+instructions: ''
+name: Disclaimer
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

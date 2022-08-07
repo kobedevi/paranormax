@@ -1,0 +1,19 @@
+columnSuffix: neexplrg
+contentColumnType: string(240)
+fieldGroup: c4ed709c-0b3f-4857-9ca5-a55a007bc9d0 # Homepage
+handle: aboutTitle
+instructions: ''
+name: 'About Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 60
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

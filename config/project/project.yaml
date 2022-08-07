@@ -1,4 +1,4 @@
-dateModified: 1659722304
+dateModified: 1659876856
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -6,9 +6,27 @@ email:
 meta:
   __names__:
     1cdca378-0f6c-4a06-b46c-8edd246da02c: paranormax # paranormax
+    2e1582a0-1841-4f17-8412-3dbfa206bd27: idk # idk
+    2fdb9298-e860-4b44-853e-b8b21a2ff63f: 'Hero Image' # Hero Image
+    04c6e6c7-4298-42cb-a6c7-a3c9eba18d4f: 'About Rich text' # About Rich text
     6dc508a7-7121-4dd3-a83e-4ca13c7b7ebf: craft # craft
+    7b3f38a7-07a2-47c8-915a-7434de959e6d: Header # Header
+    7f93787d-3ac0-4256-95b9-a0dfdefff70a: Footer # Footer
+    9a647386-7b45-4688-8a57-f32a09bcaafb: Homepage # Homepage
     18fddde8-8d22-41f5-b174-2f65ed065208: craft # craft
+    81c0c49d-3126-4664-b4a1-ef1a1f3afb27: Homepage # Homepage
+    91755f15-4268-42d7-90c8-63806734cf8c: 'About Title' # About Title
     874073e7-a836-4fbe-adff-1c4aa25a30d7: Common # Common
+    3231610b-634b-4a5d-beae-96ae0a4d3c9d: 'Menu Item' # Menu Item
+    ac707a1f-e780-4db4-98f5-f8c19ea4ae63: Disclaimer # Disclaimer
+    ac9329da-7d55-487f-a4b2-49179ad054b5: Destination # Destination
+    c4ed709c-0b3f-4857-9ca5-a55a007bc9d0: Homepage # Homepage
+    c9730088-a7be-44cb-b088-f2b502b271b5: 'Hero Title' # Hero Title
+    cf75ce3f-9af3-4777-9e98-b750e82a0099: Footer # Footer
+    d05f331b-a986-43d1-b531-24faf2fe66ab: Uploads # Uploads
+    da009cfa-0fb2-4b88-8dc2-b36ecefb962e: 'Menu Items' # Menu Items
+    dcf13bfc-ac9a-49de-8a86-ff3b7bed8647: 'Menu Label' # Menu Label
+    dd4c832f-013d-40f3-8504-ac892ab4e12a: 'About Image' # About Image
     ef2003a7-8d54-4878-abdd-dd55e978fa1a: paranormax # paranormax
 plugins:
   dumper:
@@ -25,11 +43,12 @@ plugins:
     enabled: true
     schemaVersion: 2.3.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: paranormax
+  retryDuration: null
   schemaVersion: 3.7.8
-  timeZone: America/Los_Angeles
+  timeZone: Europe/Brussels
 users:
   allowPublicRegistration: false
   defaultGroup: null

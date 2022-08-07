@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 874073e7-a836-4fbe-adff-1c4aa25a30d7 # Common
+handle: menuItems
+instructions: ''
+name: 'Menu Items'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_menuitems}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

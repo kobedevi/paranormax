@@ -1,0 +1,72 @@
+field: da009cfa-0fb2-4b88-8dc2-b36ecefb962e # Menu Items
+fieldLayouts:
+  9d885d85-85ac-482c-8d49-93a6aabb6bc7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ac9329da-7d55-487f-a4b2-49179ad054b5 # Destination
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dcf13bfc-ac9a-49de-8a86-ff3b7bed8647 # Menu Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  ac9329da-7d55-487f-a4b2-49179ad054b5: # Destination
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: destination
+    instructions: ''
+    name: Destination
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Add an entry'
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  dcf13bfc-ac9a-49de-8a86-ff3b7bed8647: # Menu Label
+    columnSuffix: null
+    contentColumnType: string(80)
+    fieldGroup: null
+    handle: menu
+    instructions: ''
+    name: 'Menu Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 20
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: menuItem
+name: 'Menu Item'
+sortOrder: 1

@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'Discover the full story' => 'Read full story',
+    'Get Started' => 'Get Started',
+    'Who We Are' => 'Get Started',
 ];
