@@ -1,9 +1,12 @@
 {
   "require": {
-    "craftcms/cms": "^3.6.4",
+    "craftcms/cms": "3.7.27.2",
     "craftcms/redactor": "2.8.8",
+    "ibericode/vat": "^2.0",
     "jamesedmonston/graphql-authentication": "^1.10",
     "studioespresso/craft-dumper": "2.0.0",
+    "studioespresso/craft-mollie-payments": "2.2.0",
+    "verbb/formie": "1.6.6",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
@@ -18,7 +21,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.0.12"
+      "php": "7.4.0"
     }
   },
   "scripts": {
