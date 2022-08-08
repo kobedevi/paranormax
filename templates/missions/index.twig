@@ -27,7 +27,12 @@
                         {% set image = mission.missionImage.one().getUrl({ quality:65, width:750, height: 500}) ?? imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
                         <div class="post-img"><img src="{{ image }}" class="img-fluid" alt="{{mission.missionTitle}}" /></div>
                         <span class="post-date">{{mission.deadline | date('D, F j Y')}}</span>
-                        <h3 class="post-title">{{mission.missionTitle}}</h3>
+                        <h3 class="post-title margin-reset">{{mission.missionTitle}}</h3>
+                        <p class="badges">
+                            {% for tag in mission.tagField %}
+                                <span class="badge badge-primary">{{tag.title}}</span>
+                            {% endfor %}
+                        </p>
                         <div class="entry-content">
                         <p>
                             {{mission.shortDescription}}

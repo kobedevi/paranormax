@@ -2,6 +2,55 @@
 
 {% block content %}
 
-    story content here
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs" style="background:none">
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-12 entries">
+
+            <article class="entry entry-single">
+            {% set image = entry.missionImage.one().getUrl({ quality:85, width:1296, height: 500}) ?? imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
+              <div class="entry-img">
+                <img src="{{ image }}" alt="{{entry.missionTitle}} banner" class="img-fluid cover">
+              </div>
+
+              <h2 class="entry-title" style="margin-bottom:8px;">
+                {{entry.missionTitle}}
+              </h2>
+              <p class="badges">
+                {% for tag in entry.tagField %}
+                    <span class="badge badge-primary">{{tag.title}}</span>
+                {% endfor %}
+              </p>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>John Doe</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="{{entry.deadline | date('Y-m-d')}}">{{entry.deadline | date('D, F j Y')}}</time></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-folder"></i>{{entry.missionStatus}}</li>
+                </ul>
+              </div>
+              
+
+              <div class="entry-content">
+
+                {{entry.richText}}
+
+              </div>
+
+              <div class="entry-footer">
+              </div>
+
+            </article><!-- End blog entry -->
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
 
 {% endblock %}
