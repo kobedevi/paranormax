@@ -1,0 +1,67 @@
+{% extends "_layouts/site" %}
+
+{% block content %}
+
+<!-- ======= spacing ======= -->
+<section class="breadcrumbs" style="background:none">
+    
+</section>
+<!-- End spacing -->
+
+<!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts blog">
+
+        <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h2>Blog</h2>
+            <p>Recent posts form our Blog</p>
+        </header>
+
+        {% paginate craft.entries.section('missions').limit(1) as pageInfo, missionEntries %}
+
+        <div class="row">
+            {% for mission in missionEntries %}
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="post-box">
+                        {% set image = mission.missionImage.one().getUrl({ quality:65, width:750, height: 500}) ?? imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
+                        <div class="post-img"><img src="{{ image }}" class="img-fluid" alt="{{mission.missionTitle}}" /></div>
+                        <span class="post-date">{{mission.deadline | date('D, F j Y')}}</span>
+                        <h3 class="post-title">{{mission.missionTitle}}</h3>
+                        <div class="entry-content">
+                        <p>
+                            {{mission.shortDescription}}
+                        </p>
+                    </div>
+                        <a href="{{ mission.url }}" class="readmore stretched-link mt-auto"><span>{{'Read More'|t}}</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+            {# {% include "_includes/components/pagination.twig" with {
+              pageInfo
+            } %} #}
+
+            <div class="blog-pagination">
+                <ul class="justify-content-center">
+                    {% if (pageInfo.firstUrl != craft.app.request.absoluteUrl) and (pageInfo.currentPage - 2 > 0) %}
+                        <li><a href="{{ pageInfo.firstUrl }}">{{'First Page'|t}}</a></li>
+                        <li class="no-hover"><a href="#">...</a></li>
+                    {% endif %}
+                    {% if pageInfo.prevUrl %}<li><a href="{{ pageInfo.prevUrl }}">{{pageInfo.currentPage - 1 }}</a></li>{% endif %}
+                    <li class="active"><a href="#">{{pageInfo.currentPage}}</a></li>
+                    {% if pageInfo.nextUrl %}<li><a href="{{ pageInfo.nextUrl }}">{{pageInfo.currentPage + 1 }}</a></li>{% endif %}
+                    {% if pageInfo.lastUrl != craft.app.request.absoluteUrl and (pageInfo.currentPage + 1 < pageInfo.totalPages)%}
+                        <li class="no-hover"><a href="#">...</a></li>
+                        <li><a href="{{ pageInfo.lastUrl }}">{{pageInfo.totalPages}}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+        </div>
+
+    </section><!-- End Recent Blog Posts Section -->
+
+{% endblock %}

@@ -1542,6 +1542,10 @@ form .btn-get-started {
   flex-direction: column;
 }
 
+.recent-blog-posts .row div {
+  margin-bottom: 1.5rem;
+}
+
 .recent-blog-posts .post-box .post-img {
   overflow: hidden;
   margin: -30px -30px 15px -30px;
@@ -1588,7 +1592,7 @@ form .btn-get-started {
 }
 
 .recent-blog-posts .post-box:hover .post-img img {
-  transform: rotate(6deg) scale(1.2);
+  transform: scale(1.03);
 }
 
 /*--------------------------------------------------------------
@@ -1742,6 +1746,7 @@ form .btn-get-started {
   margin-bottom: 60px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
+
 
 .blog .entry .entry-img {
   max-height: 440px;
@@ -2087,6 +2092,19 @@ form .btn-get-started {
 .blog .blog-pagination li.active a,
 .blog .blog-pagination li:hover a {
   color: #fff;
+}
+
+.blog .blog-pagination li.no-hover:hover,
+.blog .blog-pagination li.no-hover{
+  pointer-events: none;
+  background: none !important;
+}
+
+.blog .blog-pagination li.no-hover:hover a,
+.blog .blog-pagination li.no-hover a {
+  pointer-events: none;
+  color: #012970 !important;
+
 }
 
 .blog .sidebar {

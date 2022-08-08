@@ -1,13 +1,13 @@
 columnSuffix: bbzirfwh
-contentColumnType: string(2000)
+contentColumnType: string(400)
 fieldGroup: 38a1184a-1381-426c-a931-63707475a816 # Mission
-handle: description
+handle: shortDescription
 instructions: ''
-name: Description
+name: 'Short Description'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 500
+  charLimit: 100
   code: ''
   columnType: null
   initialRows: '4'

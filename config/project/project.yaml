@@ -1,4 +1,4 @@
-dateModified: 1659895937
+dateModified: 1659960792
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -13,6 +13,7 @@ meta:
     04c6e6c7-4298-42cb-a6c7-a3c9eba18d4f: 'About Rich text' # About Rich text
     4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd: Default # Default
     5a232fcc-f94f-4553-b73e-f1c430d22f06: Contact # Contact
+    6d8ff214-5f89-4d71-aca3-783bb085ca12: 'Image Fallback' # Image Fallback
     6dc508a7-7121-4dd3-a83e-4ca13c7b7ebf: craft # craft
     7b3f38a7-07a2-47c8-915a-7434de959e6d: Header # Header
     7f93787d-3ac0-4256-95b9-a0dfdefff70a: Footer # Footer
@@ -20,13 +21,18 @@ meta:
     9a647386-7b45-4688-8a57-f32a09bcaafb: Homepage # Homepage
     18fddde8-8d22-41f5-b174-2f65ed065208: craft # craft
     38a1184a-1381-426c-a931-63707475a816: Mission # Mission
+    38b129f0-1856-4126-bc60-d5961302c76e: 'Missions Listing' # Missions Listing
+    49b1289d-b21d-46d9-a0d9-6c6c050fc66b: 'Image Fallback' # Image Fallback
     53e5b3ad-dde8-4060-9cea-59e49a00e4db: Contact # Contact
+    63c94632-31e2-4267-94ec-9b2e1cc4f7d6: 'Rich Text' # Rich Text
     77e7f0e9-1c1e-4782-a7aa-85f4edc6819a: Missions # Missions
     81c0c49d-3126-4664-b4a1-ef1a1f3afb27: Homepage # Homepage
     218f7d4f-7514-47ab-a3f1-eae04f8c6513: Login # Login
+    432d3808-7347-4e0f-9319-30e1b9267139: 'Mission Image' # Mission Image
     450e9eae-4f9e-4cc3-810a-51dd0b929320: 'Menu Label' # Menu Label
     988d7fe1-6ad7-4a6d-9a5c-480bd13f8694: 'Mission Tag' # Mission Tag
     2025e822-001b-4fe4-bfa1-3a48415cad07: Destination # Destination
+    2560cb9a-44d2-4de4-8800-ca8c910e6bd7: 'Page Heading' # Page Heading
     27081b30-a9b1-43d4-94c5-60e38c61b511: 'Profile Info' # Profile Info
     29342b59-f4ec-4087-85a1-1c4a64b05353: 'Profile Info' # Profile Info
     91755f15-4268-42d7-90c8-63806734cf8c: 'About Title' # About Title
@@ -47,12 +53,13 @@ meta:
     ca1f8b86-1417-4253-b735-8b94c98fe351: 'Tag Field' # Tag Field
     cf75ce3f-9af3-4777-9e98-b750e82a0099: Footer # Footer
     d05f331b-a986-43d1-b531-24faf2fe66ab: Uploads # Uploads
+    d08a52d7-b81a-481f-b10d-f051e701525a: 'Missions Listing' # Missions Listing
     d46ef333-3626-49e3-97c5-972bcd3319e0: Login # Login
     da009cfa-0fb2-4b88-8dc2-b36ecefb962e: 'Menu Items' # Menu Items
     dcf13bfc-ac9a-49de-8a86-ff3b7bed8647: 'Menu Label' # Menu Label
     dd4c832f-013d-40f3-8504-ac892ab4e12a: 'About Image' # About Image
     e2ec419b-f440-4cf9-908b-cf1ac686e59d: Clients # Clients
-    e87e65cf-3015-436b-8b7a-7c794debe425: Description # Description
+    e87e65cf-3015-436b-8b7a-7c794debe425: 'Short Description' # Short Description
     e2048c77-84b6-4e9f-81b4-57f3096e1e08: Mediums # Mediums
     ef2003a7-8d54-4878-abdd-dd55e978fa1a: paranormax # paranormax
     fa76bb61-2adf-4be8-8d1f-ada647f07809: Members # Members
