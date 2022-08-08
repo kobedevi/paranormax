@@ -1,19 +1,19 @@
 {% if pageInfo %}
 
-    <div class="blog-pagination">
-        <ul class="justify-content-center">
-            {% if (pageInfo.firstUrl != craft.app.request.absoluteUrl) and (pageInfo.currentPage - 2 > 0) %}
-                <li><a href="{{ pageInfo.firstUrl }}">{{'First Page'|t}}</a></li>
-                <li class="no-hover"><a href="#">...</a></li>
-            {% endif %}
-            {% if pageInfo.prevUrl %}<li><a href="{{ pageInfo.prevUrl }}">{{pageInfo.currentPage - 1 }}</a></li>{% endif %}
-            <li class="active"><a href="#">{{pageInfo.currentPage}}</a></li>
-            {% if pageInfo.nextUrl %}<li><a href="{{ pageInfo.nextUrl }}">{{pageInfo.currentPage + 1 }}</a></li>{% endif %}
-            {% if pageInfo.lastUrl != craft.app.request.absoluteUrl and (pageInfo.currentPage + 1 < pageInfo.totalPages)%}
-                <li class="no-hover"><a href="#">...</a></li>
-                <li><a href="{{ pageInfo.lastUrl }}">{{pageInfo.totalPages}}</a></li>
-            {% endif %}
-        </ul>
-    </div>
+<div class="blog-pagination">
+    <ul class="justify-content-center">
+        {% if (pageInfo.firstUrl != craft.app.request.absoluteUrl) and (pageInfo.currentPage - 2 > 0) %}
+            <li><a href="{{ pageInfo.firstUrl }}">{{'First Page'|t}}</a></li>
+            <li class="no-hover"><a href="#">...</a></li>
+        {% endif %}
+        {% if pageInfo.prevUrl %}<li><a href="{{ pageInfo.prevUrl }}">{{pageInfo.currentPage - 1 }}</a></li>{% endif %}
+        <li class="active"><a href="#">{{pageInfo.currentPage}}</a></li>
+        {% if pageInfo.nextUrl %}<li><a href="{{ pageInfo.nextUrl }}">{{pageInfo.currentPage + 1 }}</a></li>{% endif %}
+        {% if pageInfo.lastUrl != craft.app.request.absoluteUrl and (pageInfo.currentPage + 1 < pageInfo.totalPages)%}
+            <li class="no-hover"><a href="#">...</a></li>
+            <li><a href="{{ pageInfo.lastUrl }}">{{pageInfo.totalPages}}</a></li>
+        {% endif %}
+    </ul>
+</div>
 
 {% endif %}

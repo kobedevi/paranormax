@@ -1,4 +1,4 @@
-dateModified: 1659960792
+dateModified: 1659963931
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -19,6 +19,7 @@ meta:
     7f93787d-3ac0-4256-95b9-a0dfdefff70a: Footer # Footer
     8d683f57-5a84-4647-bfde-84cd56e9f313: Register # Register
     9a647386-7b45-4688-8a57-f32a09bcaafb: Homepage # Homepage
+    11f3e7b2-56e7-4bc1-9723-957528667225: 'Pagination Limit' # Pagination Limit
     18fddde8-8d22-41f5-b174-2f65ed065208: craft # craft
     38a1184a-1381-426c-a931-63707475a816: Mission # Mission
     38b129f0-1856-4126-bc60-d5961302c76e: 'Missions Listing' # Missions Listing
@@ -35,6 +36,7 @@ meta:
     2560cb9a-44d2-4de4-8800-ca8c910e6bd7: 'Page Heading' # Page Heading
     27081b30-a9b1-43d4-94c5-60e38c61b511: 'Profile Info' # Profile Info
     29342b59-f4ec-4087-85a1-1c4a64b05353: 'Profile Info' # Profile Info
+    65106a5d-b246-4bbb-93b1-b7fc8b867053: 'Pagination Limit' # Pagination Limit
     91755f15-4268-42d7-90c8-63806734cf8c: 'About Title' # About Title
     874073e7-a836-4fbe-adff-1c4aa25a30d7: Common # Common
     992931b0-e2e5-473c-86c3-ff828afe1633: 'Mission Title' # Mission Title

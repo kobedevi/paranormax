@@ -1,0 +1,19 @@
+fieldLayouts:
+  d4044e3c-b118-4243-bb80-68bd96456e51:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 11f3e7b2-56e7-4bc1-9723-957528667225 # Pagination Limit
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Pagination Limit'
+        sortOrder: 1
+handle: paginationLimit
+name: 'Pagination Limit'
+sortOrder: 4
