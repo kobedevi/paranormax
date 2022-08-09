@@ -1,13 +1,59 @@
 {% extends "_layouts/site" %}
 
 {% block content %}
-{% set usersIds = entry.usersField.ids %} 
-<pre>
-    {{ dump(usersIds) }}
-</pre>
-<section class="inner-page">
-    <div class="container">
-        <p>vip here</p>
-    </div>
-</section>
+{# Require that a user is logged in to view this form. #}
+    {% requireLogin %}
+
+    {% macro errorList(errors) %}
+        {% if errors %}
+            {{ ul(errors, {class: 'errors'}) }}
+        {% endif %}
+    {% endmacro %}
+    {% set payments = craft.payments.email(currentUser.email).status('paid').all() %}
+    {% set image =  imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
+
+    {% if not payments %}
+        <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url({{ image }});">
+            <div class="container">
+                <div class="row align-items-center site-hero-inner justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <div class="mb-5 element-animate">
+                            <h1>VIP PAYMENT</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="site-section bg-light">
+
+            <form method="post">
+                {{ csrfInput() }}
+                {{ actionInput("mollie-payments/payment/pay") }}
+                {{ redirectInput("/web") }}
+                <input type="hidden" name="amount" value="{{ 5|hash }}">
+                <input type="hidden" name="form" value="{{ 'formHandle'|hash }}">
+
+                <div>
+                    <label for="email">{{ "E-mail"|t }}</label>
+                    <input type="email" id="email" name="email" value="{{ currentUser.email }}">
+                </div>
+                <div>
+                    <label for="firstName">{{ "First name"|t }}</label>
+                    <input type="text" id="firstName" name="fields[firstName]" value="{{ currentUser.firstName }}">
+                </div>
+                <div>
+                    <label for="lastName">{{ "Last name"|t }}</label>
+                    <input type="text" id="lastName" name="fields[lastName]" value="{{ currentUser.lastName }}">
+                </div>
+
+                <input type="submit" class="btn " value="{{ "Pay"|t }}">
+            </form>
+        </section>
+    {% endif %}
+
+
+    {% set payments = craft.payments.email(currentUser.email).status('paid').all() %}
+    {% if payments %}
+        payed
+    {% endif %}
 {% endblock %}
