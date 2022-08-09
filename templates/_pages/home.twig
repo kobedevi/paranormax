@@ -451,6 +451,7 @@
         </section>
         <!-- End Team Section -->
 
+        {% if entry.partners | length > 0 %}
         <!-- ======= Partners Section ======= -->
         <section class="clients">
 
@@ -475,7 +476,7 @@
                         <img src="{{ partner.partnerLogo.one().getUrl() }}" class="img-fluid" alt="{{ partner.partnerName }}">
                     {% endif %}
                   </div>
-                  
+
                 {% endfor %}
 
               </div>
@@ -484,6 +485,7 @@
           </div>
 
         </section><!-- End Partners Section -->
+        {% endif %}
 
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="recent-blog-posts" class="recent-blog-posts">
