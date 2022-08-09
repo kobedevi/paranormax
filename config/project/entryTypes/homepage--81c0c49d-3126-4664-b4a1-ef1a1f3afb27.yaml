@@ -80,6 +80,15 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 8ab6ccaa-303f-41e6-b753-6d1864c45042 # Partners Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 36bd8ea1-0ab1-473e-9dd1-9eb5df03170a # Partners
             instructions: null
             label: null

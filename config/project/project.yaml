@@ -1,4 +1,4 @@
-dateModified: 1660058551
+dateModified: 1660063680
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -29,6 +29,7 @@ meta:
     7ad53e3f-823e-4797-824a-190430ad474c: 'Setup Fee' # Setup Fee
     7b3f38a7-07a2-47c8-915a-7434de959e6d: Header # Header
     7f93787d-3ac0-4256-95b9-a0dfdefff70a: Footer # Footer
+    8ab6ccaa-303f-41e6-b753-6d1864c45042: 'Partners Title' # Partners Title
     8d683f57-5a84-4647-bfde-84cd56e9f313: Register # Register
     8eabf134-d6fa-49cd-973b-e25921ceddd9: 'Custom Label' # Custom Label
     8edc8321-f61a-465b-ae54-97a0b205b412: Default # Default
