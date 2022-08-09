@@ -31,6 +31,30 @@
                     {{ user ? _self.errorList(user.getErrors('username')) }}
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label for="first-name">First Name</label>
+                    {{ input('text', 'firstName', user.firstName ?? null, {
+                        id: 'first-name',
+                        autocomplete: 'given-name',
+                        class:"form-control "
+                    }) }}
+                    {{ user ? _self.errorList(user.getErrors('firstName')) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label for="last-name">Last Name</label>
+                    {{ input('text', 'lastName', user.lastName ?? null, {
+                        id: 'last-name',
+                        autocomplete: 'family-name',
+                        class:"form-control "
+                    }) }}
+                    {{ user ? _self.errorList(user.getErrors('lastName')) }}
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-12 form-group">
                     <label for="email">Email</label>
