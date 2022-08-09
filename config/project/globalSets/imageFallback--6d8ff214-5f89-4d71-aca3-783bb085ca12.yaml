@@ -4,7 +4,16 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 49b1289d-b21d-46d9-a0d9-6c6c050fc66b # Image Fallback
+            fieldUid: 49b1289d-b21d-46d9-a0d9-6c6c050fc66b # General Image Fallback
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1b930560-b9e9-4d0e-80ce-3b158fdb3512 # Profile Image FallBack
             instructions: null
             label: null
             required: false

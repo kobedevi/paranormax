@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 874073e7-a836-4fbe-adff-1c4aa25a30d7 # Common
-handle: imageFallback
+handle: profileImageFallback
 instructions: ''
-name: 'General Image Fallback'
+name: 'Profile Image FallBack'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -16,7 +16,7 @@ settings:
   previewMode: full
   restrictFiles: ''
   selectionLabel: ''
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:d05f331b-a986-43d1-b531-24faf2fe66ab' # Uploads
