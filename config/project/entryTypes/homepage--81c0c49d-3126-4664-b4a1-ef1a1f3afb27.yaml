@@ -99,6 +99,19 @@ fieldLayouts:
             width: 100
         name: Partners
         sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 2725c006-6221-4c8f-a368-8ba20a1d2ae9 # Recent Missions Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Recent Missions'
+        sortOrder: 4
 handle: homepage
 hasTitleField: false
 name: Homepage
