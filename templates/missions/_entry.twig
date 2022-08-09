@@ -31,7 +31,7 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>John Doe</li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{entry.author}}</li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="{{entry.deadline | date('Y-m-d')}}">{{entry.deadline | date('D, F j Y')}}</time></li>
                   <li class="d-flex align-items-center"><i class="bi bi-folder"></i>{{entry.missionStatus}}</li>
                 </ul>
