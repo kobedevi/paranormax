@@ -210,11 +210,12 @@
             </header>
 
             <div class="row gy-4 team-center">
+
+              {% set cropSettings = { quality:65, mode: 'crop', width:336, height: 336 } %}
               
               {% for medium in craft.users().group("Mediums").all() %}
 
-                {% set image = medium.photo.getUrl({ quality:65, mode: 'crop', width:336, height: 336 }) ?? imageFallback.profileImageFallback.one().getUrl({ quality:65, mode: 'crop', width:336, height: 336 }) %}
-                
+                {% set image = medium.photo.getUrl(cropSettings) ?? imageFallback.profileImageFallback.one().getUrl(cropSettings) %}
 
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                   <div class="member">
