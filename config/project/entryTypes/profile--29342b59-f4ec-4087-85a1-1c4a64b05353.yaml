@@ -28,7 +28,7 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: profileInfo
+handle: profile
 hasTitleField: false
 name: 'Profile Info'
 section: 27081b30-a9b1-43d4-94c5-60e38c61b511 # Profile Info

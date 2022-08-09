@@ -1,0 +1,153 @@
+field: 9c69a4e9-5989-4f93-97e0-5b37ae3f0002 # Basic Form Fields
+fieldLayouts:
+  e0ef00f2-8b48-45e6-8572-03fa5a4a0726:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4b15a976-973d-4d9b-8077-a24cee21f9d0 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5aaf1459-99d7-4cc4-a294-48eb45020f2e # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9cdc4ad0-7fb2-4dac-af73-7ee2454651c1 # Placeholder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0b17ccce-0cf2-465a-9942-ad0cce43d49e # Initial Rows
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 38d1940e-c00c-42e8-804a-e65e4f7b68ff # Required
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0b17ccce-0cf2-465a-9942-ad0cce43d49e: # Initial Rows
+    columnSuffix: qwvpwfnq
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: initialRows
+    instructions: ''
+    name: 'Initial Rows'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 2
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Number
+  4b15a976-973d-4d9b-8077-a24cee21f9d0: # Label
+    columnSuffix: mblzmsgb
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: ''
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  5aaf1459-99d7-4cc4-a294-48eb45020f2e: # Handle
+    columnSuffix: gagdgmvx
+    contentColumnType: text
+    fieldGroup: null
+    handle: fieldHandle
+    instructions: ''
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  9cdc4ad0-7fb2-4dac-af73-7ee2454651c1: # Placeholder
+    columnSuffix: xhnwkbet
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: ''
+    name: Placeholder
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  38d1940e-c00c-42e8-804a-e65e4f7b68ff: # Required
+    columnSuffix: icjjklbv
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: 'This field is required?'
+    name: Required
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+handle: paragraph
+name: Paragraph
+sortOrder: 2

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: profile
+name: 'Profile Info'
+propagationMethod: all
+siteSettings:
+  1cdca378-0f6c-4a06-b46c-8edd246da02c: # paranormax
+    enabledByDefault: true
+    hasUrls: true
+    template: _profile/index.twig
+    uriFormat: profile
+type: single

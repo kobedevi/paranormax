@@ -1,0 +1,162 @@
+field: 9c69a4e9-5989-4f93-97e0-5b37ae3f0002 # Basic Form Fields
+fieldLayouts:
+  c2ab5776-83ce-46a9-a6d7-4fa813610b11:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 9bd0e6c0-30ab-46b8-833a-78fc011625d7 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fd3ab4f4-8ee6-430d-867c-cc7b6900f1f4 # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5c71d366-02b0-45cd-9b29-dce926e955fb # Options
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba8b49fa-df74-4296-a43b-458f8d350fba # Required
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  5c71d366-02b0-45cd-9b29-dce926e955fb: # Options
+    columnSuffix: fzhzbhqq
+    contentColumnType: text
+    fieldGroup: null
+    handle: options
+    instructions: ''
+    name: Options
+    searchable: true
+    settings:
+      addRowLabel: 'Add an option'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Option Label'
+                -
+                  - handle
+                  - optionLabel
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Value
+                -
+                  - handle
+                  - value
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: ''
+      minRows: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
+  9bd0e6c0-30ab-46b8-833a-78fc011625d7: # Label
+    columnSuffix: gkrlayyc
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: ''
+    name: Label
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  ba8b49fa-df74-4296-a43b-458f8d350fba: # Required
+    columnSuffix: sgltqlhd
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: required
+    instructions: 'This field is required?'
+    name: Required
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
+  fd3ab4f4-8ee6-430d-867c-cc7b6900f1f4: # Handle
+    columnSuffix: aqpgfyzo
+    contentColumnType: text
+    fieldGroup: null
+    handle: fieldHandle
+    instructions: ''
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: checkboxes
+name: CheckBoxes
+sortOrder: 6

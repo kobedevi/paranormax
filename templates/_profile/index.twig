@@ -1,0 +1,152 @@
+{% extends "_layouts/site" %}
+
+{#
+    user detail page content where a user can update there user data
+#}
+
+{% block content %}
+    {# Require that a user is logged in to view this form. #}
+    {% requireLogin %}
+
+    {% macro errorList(errors) %}
+        {% if errors %}
+            {{ ul(errors, {class: 'errors'}) }}
+        {% endif %}
+    {% endmacro %}
+
+    {# If there were any validation errors, a `user` variable will be passed to the
+   template, which contains the posted values and validation errors. If that’s not
+   set, we’ll default to the current user. #}
+    {% set user = user ?? currentUser %}
+
+    {% if user.hasErrors() %}
+        <p>Unable to save your profile.</p>
+    {% endif %}
+    <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" ;>
+        <div class="container">
+            <div class="row align-items-center site-hero-inner justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="mb-5 element-animate">
+                        <h1>Profile Info</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 box">
+                    <form method="post" id="form" accept-charset="UTF-8" enctype="multipart/form-data">
+                        {{ csrfInput() }}
+                        {{ actionInput('users/save-user') }}
+                        {{ hiddenInput('userId', user.id) }}
+                        {{ redirectInput('/web/profile') }}
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="first-name">First Name</label>
+                                {{ input('text', 'firstName', user.firstName, {
+                                    id: 'first-name',
+                                    class: user.hasErrors('firstName') ? 'error',
+                                    autocomplete: 'given-name',
+                                    class:"form-control "
+                                }) }}
+                                {{ _self.errorList(user.getErrors('firstName')) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="last-name">Last Name</label>
+                                {{ input('text', 'lastName', user.lastName, {
+                                    id: 'last-name',
+                                    class: user.hasErrors('lastName') ? 'error',
+                                    autocomplete: 'family-name',
+                                    class:"form-control "
+                                }) }}
+                                {{ _self.errorList(user.getErrors('lastName')) }}
+                            </div>
+                        </div>
+
+                        {% if user.photo %}
+                            <label>Photo</label>
+                            {{ user.photo.getImg({width: 150, height: 150})|attr({
+                                id: 'user-photo',
+                                alt: user.friendlyName,
+                            }) }}
+
+                            <label for="delete-photo">
+                                {{ input('checkbox', 'deletePhoto', '1', {
+                                    id: 'delete-photo',
+                                    class:"form-control "
+                                }) }}
+                                Delete photo
+                            </label>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="photo">Upload a new photo</label>
+                                {{ input('file', 'photo', null, {
+                                    id: 'photo',
+                                    accept: 'image/png,image/jpeg',
+                                    class:"form-control "
+                                }) }}
+                            </div>
+                        </div>
+
+                        {% if not craft.app.config.general.useEmailAsUsername %}
+                            <label for="username">Username</label>
+                            {{ input('text', 'username', user.username, {
+                                id: 'username',
+                                class: user.hasErrors('username') ? 'error',
+                                autocomplete: 'username',
+                                class:"form-control "
+                            }) }}
+                            {{ _self.errorList(user.getErrors('username')) }}
+                        {% endif %}
+
+                        {% if craft.app.projectConfig.get('users.requireEmailVerification') %}
+                            <p>New email addresses need to be verified.</p>
+                        {% endif %}
+
+                        <div class="row ">
+                            <div class="col-md-12 form-group">
+                                <label for="new-password">New Password</label>
+                                {{ input('password', 'newPassword', null, {
+                                    id: 'new-password',
+                                    class: user.hasErrors('newPassword') ? 'error',
+                                    autocomplete: 'new-password',
+                                    class:"form-control "
+                                }) }}
+                                {{ _self.errorList(user.getErrors('newPassword')) }}
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-md-12 form-group">
+                                <label for="current-password">Current Password</label>
+                                {{ input('password', 'password', null, {
+                                    id: 'current-password',
+                                    class: user.hasErrors('currentPassword') ? 'error',
+                                    autocomplete: 'current-password',
+                                    class:"form-control "
+                                }) }}
+                                {{ _self.errorList(user.getErrors('currentPassword')) }}
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="submit" value="Save Profile" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

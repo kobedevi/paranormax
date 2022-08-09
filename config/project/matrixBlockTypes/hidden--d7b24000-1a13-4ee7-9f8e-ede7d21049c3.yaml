@@ -1,0 +1,70 @@
+field: 9c69a4e9-5989-4f93-97e0-5b37ae3f0002 # Basic Form Fields
+fieldLayouts:
+  3723d0f9-d68c-421b-9fc6-243a4171ff5f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2d8d6613-cd91-465c-a603-3d5d0537cb6a # Handle
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9a53e480-7825-4274-8db1-803f1663eb1a # Hidden Value
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2d8d6613-cd91-465c-a603-3d5d0537cb6a: # Handle
+    columnSuffix: paiiorfk
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: 'This field will not visible in the form, just in the source code'
+    name: Handle
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  9a53e480-7825-4274-8db1-803f1663eb1a: # Hidden Value
+    columnSuffix: fjpyvoph
+    contentColumnType: text
+    fieldGroup: null
+    handle: hiddenValue
+    instructions: 'You can use twig code'
+    name: 'Hidden Value'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: '{{ craft.request.path }}'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: hidden
+name: Hidden
+sortOrder: 7
