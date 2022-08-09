@@ -1425,6 +1425,10 @@ form .btn-get-started {
   padding: 60px 0;
 }
 
+.team .row.team-center {
+  justify-content: center;
+}
+
 .team .member {
   overflow: hidden;
   text-align: center;
