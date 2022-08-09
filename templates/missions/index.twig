@@ -29,7 +29,7 @@
                         <span class="post-date">{{mission.deadline | date('D, F j Y')}}</span>
                         <h3 class="post-title margin-reset">{{mission.missionTitle}}</h3>
                         <p class="badges">
-                            {% for tag in mission.tagField %}
+                            {% for tag in mission.tagField.all() %}
                                 <span class="badge badge-primary">{{tag.title}}</span>
                             {% endfor %}
                         </p>

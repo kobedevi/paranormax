@@ -24,7 +24,7 @@
                 {{entry.missionTitle}}
               </h2>
               <p class="badges">
-                {% for tag in entry.tagField %}
+                {% for tag in entry.tagField.all() %}
                     <span class="badge badge-primary">{{tag.title}}</span>
                 {% endfor %}
               </p>

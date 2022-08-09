@@ -1,4 +1,4 @@
-dateModified: 1660056332
+dateModified: 1660058551
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -18,6 +18,7 @@ meta:
     04c6e6c7-4298-42cb-a6c7-a3c9eba18d4f: 'About Rich text' # About Rich text
     4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd: Default # Default
     4d381cbb-d097-4f67-a5ea-1ede995a56f1: 'Min Value' # Min Value
+    4db0cd0c-6965-4801-8389-3327bb85ef7d: 'Partner Name' # Partner Name
     4ffaf42f-75bc-49b5-acf3-14844446e5ca: Handle # Handle
     5a232fcc-f94f-4553-b73e-f1c430d22f06: Contact # Contact
     5aaf1459-99d7-4cc4-a294-48eb45020f2e: Handle # Handle
@@ -40,6 +41,7 @@ meta:
     9cdc4ad0-7fb2-4dac-af73-7ee2454651c1: Placeholder # Placeholder
     11f3e7b2-56e7-4bc1-9723-957528667225: 'Pagination Limit' # Pagination Limit
     18fddde8-8d22-41f5-b174-2f65ed065208: craft # craft
+    36bd8ea1-0ab1-473e-9dd1-9eb5df03170a: Partners # Partners
     38a1184a-1381-426c-a931-63707475a816: Mission # Mission
     38b129f0-1856-4126-bc60-d5961302c76e: 'Missions Listing' # Missions Listing
     38d1940e-c00c-42e8-804a-e65e4f7b68ff: Required # Required
@@ -51,12 +53,14 @@ meta:
     77b7874a-949c-427f-b2cd-d916d5322190: Options # Options
     77e7f0e9-1c1e-4782-a7aa-85f4edc6819a: Missions # Missions
     81c0c49d-3126-4664-b4a1-ef1a1f3afb27: Homepage # Homepage
+    90b2d072-fa0e-4682-9e02-ccc4336cc75e: 'Partner Logo' # Partner Logo
     98fc1f1b-bdf2-4f1c-8964-43da862cfbad: 'Radio Buttons' # Radio Buttons
     136f0ed2-4e5b-4c5e-a663-3c164113fdf5: Required # Required
     218f7d4f-7514-47ab-a3f1-eae04f8c6513: Login # Login
     432d3808-7347-4e0f-9319-30e1b9267139: 'Mission Image' # Mission Image
     450e9eae-4f9e-4cc3-810a-51dd0b929320: 'Menu Label' # Menu Label
     480f298c-8b76-4ed1-919c-d9d3a2cebd76: Required # Required
+    949cb20c-16fe-4890-ac92-9f1eff1e986c: Destination # Destination
     988d7fe1-6ad7-4a6d-9a5c-480bd13f8694: 'Mission Tag' # Mission Tag
     2025e822-001b-4fe4-bfa1-3a48415cad07: Destination # Destination
     2560cb9a-44d2-4de4-8800-ca8c910e6bd7: 'Page Heading' # Page Heading
@@ -79,6 +83,7 @@ meta:
     ac707a1f-e780-4db4-98f5-f8c19ea4ae63: Disclaimer # Disclaimer
     ac9329da-7d55-487f-a4b2-49179ad054b5: Destination # Destination
     b8cc4129-896c-4a08-97ec-4daea2e81855: Register # Register
+    b269cf29-d375-43fc-bb81-ad78ca103bd1: Partner # Partner
     b51367c1-4d49-4b11-ab43-ea56e6c00858: Number # Number
     ba8b49fa-df74-4296-a43b-458f8d350fba: Required # Required
     bb8b993f-020a-4c6c-9a47-2132193b4e3c: Label # Label

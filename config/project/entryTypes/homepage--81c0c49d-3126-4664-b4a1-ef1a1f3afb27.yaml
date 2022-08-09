@@ -77,6 +77,19 @@ fieldLayouts:
             width: 100
         name: About
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 36bd8ea1-0ab1-473e-9dd1-9eb5df03170a # Partners
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Partners
+        sortOrder: 3
 handle: homepage
 hasTitleField: false
 name: Homepage

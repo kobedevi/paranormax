@@ -62,7 +62,7 @@
 
             {% include "_includes/components/countBlock.twig" with {
               data: {
-                icon: 'bi-people',
+                icon: 'bi-person-badge',
                 color: '#bb0852',
                 amount: craft.users().group("Mediums").all()|length,
                 text: 'Mediums'
@@ -71,9 +71,9 @@
 
             {% include "_includes/components/countBlock.twig" with {
               data: {
-                icon: 'bi-emoji-smile',
-                amount: '28',
-                text: 'test'
+                icon: 'bi-people',
+                amount: entry.partners.all()|length,
+                text: 'Partners'
               }
             } %}
             
@@ -169,89 +169,6 @@
           </div>
 
         </section><!-- End Services Section -->
-
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
-
-          <div class="container" data-aos="fade-up">
-
-            <header class="section-header">
-              <h2>Pricing</h2>
-              <p>Check our Pricing</p>
-            </header>
-
-            <div class="row gy-4" data-aos="fade-left">
-
-              <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                <div class="box">
-                  <h3 style="color: #07d5c0;">Free Plan</h3>
-                  <div class="price"><sup>$</sup>0<span> / mo</span></div>
-                  <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
-                  <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li class="na">Pharetra massa</li>
-                    <li class="na">Massa ultricies mi</li>
-                  </ul>
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                <div class="box">
-                  <span class="featured">Featured</span>
-                  <h3 style="color: #65c600;">Starter Plan</h3>
-                  <div class="price"><sup>$</sup>19<span> / mo</span></div>
-                  <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
-                  <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li>Pharetra massa</li>
-                    <li class="na">Massa ultricies mi</li>
-                  </ul>
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                <div class="box">
-                  <h3 style="color: #ff901c;">Business Plan</h3>
-                  <div class="price"><sup>$</sup>29<span> / mo</span></div>
-                  <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
-                  <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li>Pharetra massa</li>
-                    <li>Massa ultricies mi</li>
-                  </ul>
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                <div class="box">
-                  <h3 style="color: #ff0071;">Ultimate Plan</h3>
-                  <div class="price"><sup>$</sup>49<span> / mo</span></div>
-                  <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
-                  <ul>
-                    <li>Aida dere</li>
-                    <li>Nec feugiat nisl</li>
-                    <li>Nulla at volutpat dola</li>
-                    <li>Pharetra massa</li>
-                    <li>Massa ultricies mi</li>
-                  </ul>
-                  <a href="#" class="btn-buy">Buy Now</a>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </section><!-- End Pricing Section -->
 
         <!-- ======= F.A.Q Section ======= -->
         <section id="faq" class="faq">
@@ -361,161 +278,6 @@
           </div>
 
         </section><!-- End F.A.Q Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-
-          <div class="container" data-aos="fade-up">
-
-            <header class="section-header">
-              <h2>Portfolio</h2>
-              <p>Check our latest work</p>
-            </header>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-              <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="portfolio-flters">
-                  <li data-filter="*" class="filter-active">All</li>
-                  <li data-filter=".filter-app">App</li>
-                  <li data-filter=".filter-card">Card</li>
-                  <li data-filter=".filter-web">Web</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>App 1</h4>
-                    <p>App</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Web 3</h4>
-                    <p>Web</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>App 2</h4>
-                    <p>App</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Card 2</h4>
-                    <p>Card</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Web 2</h4>
-                    <p>Web</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>App 3</h4>
-                    <p>App</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Card 1</h4>
-                    <p>Card</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Card 3</h4>
-                    <p>Card</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                  <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Web 3</h4>
-                    <p>Web</p>
-                    <div class="portfolio-links">
-                      <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                      <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </section><!-- End Portfolio Section -->
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -634,12 +396,6 @@
                 <div class="member">
                   <div class="member-img">
                     <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
                   </div>
                   <div class="member-info">
                     <h4>Walter White</h4>
@@ -653,12 +409,6 @@
                 <div class="member">
                   <div class="member-img">
                     <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
                   </div>
                   <div class="member-info">
                     <h4>Sarah Jhonson</h4>
@@ -672,12 +422,6 @@
                 <div class="member">
                   <div class="member-img">
                     <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
                   </div>
                   <div class="member-info">
                     <h4>William Anderson</h4>
@@ -691,12 +435,6 @@
                 <div class="member">
                   <div class="member-img">
                     <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                    <div class="social">
-                      <a href=""><i class="bi bi-twitter"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
                   </div>
                   <div class="member-info">
                     <h4>Amanda Jepson</h4>
@@ -710,34 +448,42 @@
 
           </div>
 
-        </section><!-- End Team Section -->
+        </section>
+        <!-- End Team Section -->
 
-        <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
+        <!-- ======= Partners Section ======= -->
+        <section class="clients">
 
           <div class="container" data-aos="fade-up">
 
-            <header class="section-header">
+            <header id="partners" class="section-header">
               <h2>Our Clients</h2>
               <p>Temporibus omnis officia</p>
             </header>
 
             <div class="clients-slider swiper">
               <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+
+                {% for partner in entry.partners.all() %}
+
+                  <div class="swiper-slide">
+                    {% if partner.destination %}
+                      <a href="{{ partner.destination }}" target="_blank">
+                        <img src="{{ partner.partnerLogo.one().getUrl() }}" class="img-fluid" alt="{{ partner.partnerName }}">
+                      </a>
+                      {% else %}
+                        <img src="{{ partner.partnerLogo.one().getUrl() }}" class="img-fluid" alt="{{ partner.partnerName }}">
+                    {% endif %}
+                  </div>
+                  
+                {% endfor %}
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
 
-        </section><!-- End Clients Section -->
+        </section><!-- End Partners Section -->
 
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="recent-blog-posts" class="recent-blog-posts">
