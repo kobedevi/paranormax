@@ -1,6 +1,0 @@
-description: ''
-handle: clients
-name: Clients
-permissions:
-  - 'createentries:77e7f0e9-1c1e-4782-a7aa-85f4edc6819a' # Missions
-  - 'editentries:77e7f0e9-1c1e-4782-a7aa-85f4edc6819a' # Missions

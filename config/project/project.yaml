@@ -1,4 +1,4 @@
-dateModified: 1660146157
+dateModified: 1660146924
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -97,6 +97,7 @@ meta:
     b51367c1-4d49-4b11-ab43-ea56e6c00858: Number # Number
     ba8b49fa-df74-4296-a43b-458f8d350fba: Required # Required
     bb8b993f-020a-4c6c-9a47-2132193b4e3c: Label # Label
+    bf952d95-a6a0-4614-9049-eea5d63687bb: 'Mediums Queue' # Mediums Queue
     c4ed709c-0b3f-4857-9ca5-a55a007bc9d0: Homepage # Homepage
     c8c997ad-5dcf-4f5e-8b99-d4a1b3082cab: VIP # VIP
     c3175e60-cd06-44f1-9b8f-ce8dd07bf523: 'Max Value' # Max Value
@@ -112,7 +113,6 @@ meta:
     dcf13bfc-ac9a-49de-8a86-ff3b7bed8647: 'Menu Label' # Menu Label
     dd4c832f-013d-40f3-8504-ac892ab4e12a: 'About Image' # About Image
     ddac7416-7008-4913-9f41-4a1ca1963477: Options # Options
-    e2ec419b-f440-4cf9-908b-cf1ac686e59d: Clients # Clients
     e6c56316-4172-45f6-a664-faf91049cf68: CheckBoxes # CheckBoxes
     e87e65cf-3015-436b-8b7a-7c794debe425: 'Short Description' # Short Description
     e2048c77-84b6-4e9f-81b4-57f3096e1e08: Mediums # Mediums
