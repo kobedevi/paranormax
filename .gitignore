@@ -1,8 +1,7 @@
 /.env
+/.env.dev
 /.idea
 /vendor
 /templates/_Design
 .DS_Store
-.env-live
-.env-local
 TODO.md
