@@ -55,6 +55,40 @@
 
         </section>
         <!-- End About Section -->
+        
+        <!-- ======= Recent Blog Posts Section ======= -->
+        <section id="recent-blog-posts" class="recent-blog-posts">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              {{entry.recentMissionsTitle}}
+            </header>
+
+            <div class="row">
+
+            {# Filter out draft missions #}
+            {% for mission in craft.entries({ section: 'missions', missionStatus: "!=" ~ 'Draft' }).limit(3) %}
+              
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="post-box">
+                        {% set image = mission.missionImage.one().getUrl({ quality:65, width:750, height: 500}) ?? imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
+                        <div class="post-img"><img src="{{ image }}" class="img-fluid" alt="{{mission.missionTitle}}" /></div>
+                        <span class="post-date">{{mission.deadline | date('D, F j Y')}}</span>
+                        <h3 class="post-title margin-reset">{{mission.missionTitle}}</h3>
+                        <div class="entry-content">
+                    </div>
+                        <a href="{{ mission.url }}" class="readmore stretched-link mt-auto"><span>{{'Read More'|t}}</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+            </div>
+          </div>
+
+        </section>
+        <!-- End Recent Blog Posts Section -->
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts">
@@ -100,6 +134,42 @@
           </div>
         </section>
         <!-- End Counts Section -->
+
+        <!-- ======= Team Section ======= -->
+        {% if craft.users().group("Mediums").all() | length > 0 %}
+        <section id="team" class="team">
+
+          <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+              {{entry.teamHeading}}
+            </header>
+
+            <div class="row gy-4 team-center">
+
+              {% set cropSettings = { quality:65, mode: 'crop', width:336, height: 336 } %}
+              {% for medium in craft.users().group("Mediums").all() %}
+
+                {% set image = medium.photo.getUrl(cropSettings) ?? imageFallback.profileImageFallback.one().getUrl(cropSettings) %}
+                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                  <div class="member">
+                    <div class="member-img">
+                      <img src="{{ image }}" class="img-fluid" alt="">
+                    </div>
+                    <div class="member-info">
+                      <h4>{{medium.fullName}}</h4>
+                      <span>{{'Medium'|t}}</span>
+                    </div>
+                  </div>
+                </div>
+              
+              {% endfor %}
+
+            </div>
+          </div>
+        </section>
+        {% endif %}
+        <!-- End Team Section -->
 
         <!-- ======= Testimonials Section ======= -->
         {% if entry.reviews.all() | length > 0 %}
@@ -148,42 +218,6 @@
         {% endif %}
         <!-- End Testimonials Section -->
 
-        <!-- ======= Team Section ======= -->
-        {% if craft.users().group("Mediums").all() | length > 0 %}
-        <section id="team" class="team">
-
-          <div class="container" data-aos="fade-up">
-
-            <header class="section-header">
-              {{entry.teamHeading}}
-            </header>
-
-            <div class="row gy-4 team-center">
-
-              {% set cropSettings = { quality:65, mode: 'crop', width:336, height: 336 } %}
-              {% for medium in craft.users().group("Mediums").all() %}
-
-                {% set image = medium.photo.getUrl(cropSettings) ?? imageFallback.profileImageFallback.one().getUrl(cropSettings) %}
-                  <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                  <div class="member">
-                    <div class="member-img">
-                      <img src="{{ image }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="member-info">
-                      <h4>{{medium.fullName}}</h4>
-                      <span>{{'Medium'|t}}</span>
-                    </div>
-                  </div>
-                </div>
-              
-              {% endfor %}
-
-            </div>
-          </div>
-        </section>
-        {% endif %}
-        <!-- End Team Section -->
-
         <!-- ======= Partners Section ======= -->
         {% if entry.partners | length > 0 %}
         <section class="clients">
@@ -219,40 +253,6 @@
         </section>
         {% endif %}
         <!-- End Partners Section -->
-
-        <!-- ======= Recent Blog Posts Section ======= -->
-        <section id="recent-blog-posts" class="recent-blog-posts">
-
-          <div class="container" data-aos="fade-up">
-
-            <header class="section-header">
-              {{entry.recentMissionsTitle}}
-            </header>
-
-            <div class="row">
-
-            {# Filter out draft missions #}
-            {% for mission in craft.entries({ section: 'missions', missionStatus: "!=" ~ 'Draft' }).limit(3) %}
-              
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="post-box">
-                        {% set image = mission.missionImage.one().getUrl({ quality:65, width:750, height: 500}) ?? imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
-                        <div class="post-img"><img src="{{ image }}" class="img-fluid" alt="{{mission.missionTitle}}" /></div>
-                        <span class="post-date">{{mission.deadline | date('D, F j Y')}}</span>
-                        <h3 class="post-title margin-reset">{{mission.missionTitle}}</h3>
-                        <div class="entry-content">
-                    </div>
-                        <a href="{{ mission.url }}" class="readmore stretched-link mt-auto"><span>{{'Read More'|t}}</span><i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
-            {% endfor %}
-
-            </div>
-          </div>
-
-        </section>
-        <!-- End Recent Blog Posts Section -->
 
       </main><!-- End #main -->
     {% endblock %}
