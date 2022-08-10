@@ -2,6 +2,7 @@
   "require": {
     "craftcms/cms": "3.7.27.2",
     "craftcms/redactor": "2.8.8",
+    "enupal/stripe": "4.0.9",
     "ibericode/vat": "^2.0",
     "jamesedmonston/graphql-authentication": "^1.10",
     "studioespresso/craft-dumper": "2.0.0",

@@ -284,7 +284,8 @@
 
             <div class="row">
 
-            {% for mission in craft.entries.section('missions').limit(3) %}
+            {# Filter out draft missions #}
+            {% for mission in craft.entries({ section: 'missions', missionStatus: "!=" ~ 'Draft' }).limit(3) %}
               
               <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="post-box">

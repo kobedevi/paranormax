@@ -2,6 +2,9 @@
 
 {% block content %}
 
+    {% if entry.missionStatus.value == "draft" %}
+      {% redirect "/missions" %}
+    {% endif %}
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs" style="background:none">
     </section><!-- End Breadcrumbs -->
