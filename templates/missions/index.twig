@@ -18,10 +18,12 @@
         </header>
 
         {# paginate and filter out draft missions #}
+        {# missionStatus: "!=" ~ 'Draft' #}
+
         {% paginate craft.entries({
             section: 'missions', 
             missionStatus: "!=" ~ 'Draft',
-            missionStatus: "!=" ~ 'Denied'
+            denied: false
         }).limit(paginationLimit.paginationLimit) as pageInfo, missionEntries %}
         
         <div class="row">

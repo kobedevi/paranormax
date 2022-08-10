@@ -2,8 +2,8 @@
 
 {% block content %}
 
-    {% if entry.missionStatus.value == "draft" %}
-      {% redirect "/missions" %}
+    {% if (entry.missionStatus.value == "draft") or (entry.denied == "true") %}
+      {% redirect "/web/missions" %}
     {% endif %}
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs" style="background:none">
