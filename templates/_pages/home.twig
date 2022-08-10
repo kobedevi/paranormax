@@ -23,7 +23,8 @@
           </div>
         </div>
 
-      </section><!-- End Hero -->
+      </section>
+      <!-- End Hero -->
 
       <main id="main">
         <!-- ======= About Section ======= -->
@@ -89,10 +90,10 @@
 
             {% include "_includes/components/countBlock.twig" with {
               data: {
-                icon: 'bi-headset',
+                icon: 'bi-chat-right-heart',
                 color: '#15be56',
-                amount: '28',
-                text: 'test'
+                amount: entry.reviews.all()|length,
+                text: 'Testimonials'
               }
             } %}
 
