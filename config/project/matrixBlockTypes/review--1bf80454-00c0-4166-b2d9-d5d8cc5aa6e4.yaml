@@ -1,0 +1,143 @@
+field: 45aba986-67e5-4410-9e78-1296cf93f459 # Reviews
+fieldLayouts:
+  a0a5e682-0032-46eb-a9e4-f741441fe96f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b88f7036-1b6c-4e4e-9a48-60ec011e3777 # Rating
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 87fe426b-8309-4fda-9505-c6134aec1419 # Short Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f941304a-c434-4951-9b12-20fe6adef532 # Profile Picture
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1f1b824e-df4a-431f-b3f0-96f486962546 # User Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  1f1b824e-df4a-431f-b3f0-96f486962546: # User Name
+    columnSuffix: null
+    contentColumnType: string(120)
+    fieldGroup: null
+    handle: profileName
+    instructions: ''
+    name: 'User Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 30
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  87fe426b-8309-4fda-9505-c6134aec1419: # Short Description
+    columnSuffix: null
+    contentColumnType: string(800)
+    fieldGroup: null
+    handle: shortDescription
+    instructions: ''
+    name: 'Short Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 200
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b88f7036-1b6c-4e4e-9a48-60ec011e3777: # Rating
+    columnSuffix: null
+    contentColumnType: smallint(1)
+    fieldGroup: null
+    handle: rating
+    instructions: 'Rating out of 5 stars'
+    name: Rating
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: 5
+      max: 5
+      min: 1
+      prefix: null
+      previewCurrency: ''
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  f941304a-c434-4951-9b12-20fe6adef532: # Profile Picture
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: profilePicture
+    instructions: ''
+    name: 'Profile Picture'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:d05f331b-a986-43d1-b531-24faf2fe66ab' # Uploads
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: thumbs
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:d05f331b-a986-43d1-b531-24faf2fe66ab' # Uploads
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:d05f331b-a986-43d1-b531-24faf2fe66ab' # Uploads
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: review
+name: Review
+sortOrder: 1

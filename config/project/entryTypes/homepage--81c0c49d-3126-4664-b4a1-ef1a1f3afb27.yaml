@@ -102,6 +102,19 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 28c8ceed-b0a0-4897-9c46-212f113e932f # Team Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Team
+        sortOrder: 4
+      -
+        elements:
+          -
             fieldUid: 2725c006-6221-4c8f-a368-8ba20a1d2ae9 # Recent Missions Title
             instructions: null
             label: null
@@ -111,7 +124,29 @@ fieldLayouts:
             warning: null
             width: 100
         name: 'Recent Missions'
-        sortOrder: 4
+        sortOrder: 5
+      -
+        elements:
+          -
+            fieldUid: 955edc4f-19af-4537-b30e-4100e2cf4060 # Review Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 45aba986-67e5-4410-9e78-1296cf93f459 # Reviews
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Testimonials
+        sortOrder: 6
 handle: homepage
 hasTitleField: false
 name: Homepage
