@@ -1,0 +1,58 @@
+isPublic: false
+name: 'Private Schema'
+scope:
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
+  - 'sections.218f7d4f-7514-47ab-a3f1-eae04f8c6513:read' # Login
+  - 'entrytypes.d46ef333-3626-49e3-97c5-972bcd3319e0:read' # Login
+  - 'sections.77e7f0e9-1c1e-4782-a7aa-85f4edc6819a:read' # Missions
+  - 'entrytypes.4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd:read' # Default
+  - 'sections.27081b30-a9b1-43d4-94c5-60e38c61b511:read' # Profile Info
+  - 'entrytypes.29342b59-f4ec-4087-85a1-1c4a64b05353:read' # Profile Info
+  - 'sections.b8cc4129-896c-4a08-97ec-4daea2e81855:read' # Register
+  - 'entrytypes.8d683f57-5a84-4647-bfde-84cd56e9f313:read' # Register
+  - 'volumes.d05f331b-a986-43d1-b531-24faf2fe66ab:read' # Uploads
+  - 'globalsets.6d8ff214-5f89-4d71-aca3-783bb085ca12:read' # Image Fallback
+  - 'globalsets.65106a5d-b246-4bbb-93b1-b7fc8b867053:read' # Pagination Limit
+  - 'usergroups.everyone:read'
+  - 'usergroups.e2048c77-84b6-4e9f-81b4-57f3096e1e08:read' # Mediums
+  - 'usergroups.bf952d95-a6a0-4614-9049-eea5d63687bb:read' # Mediums Queue
+  - 'usergroups.fa76bb61-2adf-4be8-8d1f-ada647f07809:read' # Members
+  - 'taggroups.988d7fe1-6ad7-4a6d-9a5c-480bd13f8694:read' # Mission Tag
+  - 'formieForms.all:read'
+  - 'formieForms.95cf68b2-733d-44f7-95f4-2f50485191ec:read'
+  - 'formieSubmissions.all:read'
+  - 'formieSubmissions.95cf68b2-733d-44f7-95f4-2f50485191ec:read'
+  - 'sections.53e5b3ad-dde8-4060-9cea-59e49a00e4db:edit' # Contact
+  - 'entrytypes.5a232fcc-f94f-4553-b73e-f1c430d22f06:save' # Contact
+  - 'sections.9a647386-7b45-4688-8a57-f32a09bcaafb:edit' # Homepage
+  - 'entrytypes.81c0c49d-3126-4664-b4a1-ef1a1f3afb27:save' # Homepage
+  - 'sections.218f7d4f-7514-47ab-a3f1-eae04f8c6513:edit' # Login
+  - 'entrytypes.d46ef333-3626-49e3-97c5-972bcd3319e0:save' # Login
+  - 'sections.77e7f0e9-1c1e-4782-a7aa-85f4edc6819a:edit' # Missions
+  - 'entrytypes.4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd:edit' # Default
+  - 'entrytypes.4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd:create' # Default
+  - 'entrytypes.4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd:save' # Default
+  - 'entrytypes.4d5b7c01-a277-4a52-ac7e-85f9cfd98fdd:delete' # Default
+  - 'sections.38b129f0-1856-4126-bc60-d5961302c76e:edit' # Missions Listing
+  - 'entrytypes.d08a52d7-b81a-481f-b10d-f051e701525a:save' # Missions Listing
+  - 'sections.27081b30-a9b1-43d4-94c5-60e38c61b511:edit' # Profile Info
+  - 'entrytypes.29342b59-f4ec-4087-85a1-1c4a64b05353:save' # Profile Info
+  - 'sections.b8cc4129-896c-4a08-97ec-4daea2e81855:edit' # Register
+  - 'entrytypes.8d683f57-5a84-4647-bfde-84cd56e9f313:save' # Register
+  - 'sections.c8c997ad-5dcf-4f5e-8b99-d4a1b3082cab:edit' # VIP
+  - 'entrytypes.ac7c91d0-f446-4ffd-9fe8-38fa922f5fae:save' # VIP
+  - 'volumes.d05f331b-a986-43d1-b531-24faf2fe66ab:edit' # Uploads
+  - 'volumes.d05f331b-a986-43d1-b531-24faf2fe66ab:create' # Uploads
+  - 'taggroups.988d7fe1-6ad7-4a6d-9a5c-480bd13f8694:edit' # Mission Tag
+  - 'taggroups.988d7fe1-6ad7-4a6d-9a5c-480bd13f8694:save' # Mission Tag
+  - 'taggroups.988d7fe1-6ad7-4a6d-9a5c-480bd13f8694:delete' # Mission Tag
+  - 'formieSubmissions.all:edit'
+  - 'formieSubmissions.all:create'
+  - 'formieSubmissions.all:save'
+  - 'formieSubmissions.all:delete'
+  - 'formieSubmissions.95cf68b2-733d-44f7-95f4-2f50485191ec:edit'
+  - 'formieSubmissions.95cf68b2-733d-44f7-95f4-2f50485191ec:create'
+  - 'formieSubmissions.95cf68b2-733d-44f7-95f4-2f50485191ec:save'
+  - 'formieSubmissions.95cf68b2-733d-44f7-95f4-2f50485191ec:delete'

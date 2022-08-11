@@ -1,4 +1,4 @@
-dateModified: 1660177905
+dateModified: 1660232558
 email:
   fromEmail: k@k.com
   fromName: paranormax
@@ -117,6 +117,7 @@ meta:
     e6c56316-4172-45f6-a664-faf91049cf68: CheckBoxes # CheckBoxes
     e87e65cf-3015-436b-8b7a-7c794debe425: 'Short Description' # Short Description
     e2048c77-84b6-4e9f-81b4-57f3096e1e08: Mediums # Mediums
+    eab35bb1-5fb5-4f4b-b47d-abf56fbfc46d: 'Private Schema' # Private Schema
     ef2003a7-8d54-4878-abdd-dd55e978fa1a: paranormax # paranormax
     f4e30cad-4b29-425b-a7f8-15ca11c7ffd8: Label # Label
     f49c901e-2b53-4ce6-819a-8fc414143ba7: 'Single Line' # Single Line
@@ -220,6 +221,231 @@ plugins:
     enabled: true
     licenseKey: P1533L8O2HCCOQ2PG3R35CCX
     schemaVersion: 1.1.0
+    settings:
+      activationEmailSent: 'You will receive an email if it matches an account in our system'
+      allowRegistration: '1'
+      allowedFacebookDomains: null
+      allowedGoogleDomains: null
+      allowedTwitterDomains: null
+      appleClientId: null
+      appleClientSecret: null
+      appleRedirectUrl: null
+      appleServiceId: null
+      appleServiceSecret: null
+      assetMutations: null
+      assetNotFound: 'We couldn''t find any matching assets'
+      assetQueries: null
+      emailNotInScope: 'No email in scope'
+      entryMutations: null
+      entryNotFound: 'We couldn''t find any matching entries'
+      entryQueries: null
+      facebookAppId: null
+      facebookAppSecret: null
+      facebookEmailMismatch: 'Email address doesn''t match allowed Facebook domains'
+      facebookRedirectUrl: null
+      fieldRestrictions:
+        __assoc__:
+          -
+            - schema-1
+            -
+              __assoc__:
+                -
+                  - aboutImage
+                  - queryMutate
+                -
+                  - aboutRichText
+                  - queryMutate
+                -
+                  - aboutTitle
+                  - queryMutate
+                -
+                  - assignedTo
+                  - queryMutate
+                -
+                  - deadline
+                  - queryMutate
+                -
+                  - denied
+                  - queryMutate
+                -
+                  - disclaimer
+                  - queryMutate
+                -
+                  - imageFallback
+                  - queryMutate
+                -
+                  - heroImage
+                  - queryMutate
+                -
+                  - heroTitle
+                  - queryMutate
+                -
+                  - menuItems
+                  - queryMutate
+                -
+                  - missionImage
+                  - queryMutate
+                -
+                  - missionStatus
+                  - queryMutate
+                -
+                  - missionTitle
+                  - queryMutate
+                -
+                  - pageHeading
+                  - queryMutate
+                -
+                  - paginationLimit
+                  - queryMutate
+                -
+                  - partners
+                  - queryMutate
+                -
+                  - partnersTitle
+                  - queryMutate
+                -
+                  - profileImageFallback
+                  - queryMutate
+                -
+                  - recentMissionsTitle
+                  - queryMutate
+                -
+                  - reviewHeading
+                  - queryMutate
+                -
+                  - reviews
+                  - queryMutate
+                -
+                  - richText
+                  - queryMutate
+                -
+                  - shortDescription
+                  - queryMutate
+                -
+                  - tagField
+                  - queryMutate
+                -
+                  - teamHeading
+                  - queryMutate
+          -
+            - schema-2
+            -
+              __assoc__:
+                -
+                  - aboutImage
+                  - queryMutate
+                -
+                  - aboutRichText
+                  - queryMutate
+                -
+                  - aboutTitle
+                  - queryMutate
+                -
+                  - assignedTo
+                  - queryMutate
+                -
+                  - deadline
+                  - queryMutate
+                -
+                  - denied
+                  - queryMutate
+                -
+                  - disclaimer
+                  - queryMutate
+                -
+                  - imageFallback
+                  - queryMutate
+                -
+                  - heroImage
+                  - queryMutate
+                -
+                  - heroTitle
+                  - queryMutate
+                -
+                  - menuItems
+                  - queryMutate
+                -
+                  - missionImage
+                  - queryMutate
+                -
+                  - missionStatus
+                  - queryMutate
+                -
+                  - missionTitle
+                  - queryMutate
+                -
+                  - pageHeading
+                  - queryMutate
+                -
+                  - paginationLimit
+                  - queryMutate
+                -
+                  - partners
+                  - queryMutate
+                -
+                  - partnersTitle
+                  - queryMutate
+                -
+                  - profileImageFallback
+                  - queryMutate
+                -
+                  - recentMissionsTitle
+                  - queryMutate
+                -
+                  - reviewHeading
+                  - queryMutate
+                -
+                  - reviews
+                  - queryMutate
+                -
+                  - richText
+                  - queryMutate
+                -
+                  - shortDescription
+                  - queryMutate
+                -
+                  - tagField
+                  - queryMutate
+                -
+                  - teamHeading
+                  - queryMutate
+      forbiddenField: 'User doesn''t have permission to access requested field(s)'
+      forbiddenMutation: 'User doesn''t have permission to perform this mutation'
+      googleClientId: null
+      googleEmailMismatch: 'Email address doesn''t match allowed Google domains'
+      googleTokenIdInvalid: 'Invalid Google Token ID'
+      granularSchemas: null
+      invalidEmailAddress: 'Invalid email address'
+      invalidHeader: 'Invalid Authorization Header'
+      invalidJwtSecretKey: 'Invalid JWT Secret Key'
+      invalidLogin: 'We couldn''t log you in with the provided details'
+      invalidOauthToken: 'Invalid OAuth Token'
+      invalidPasswordMatch: 'New passwords do not match'
+      invalidPasswordUpdate: 'We couldn''t update the password with the provided details'
+      invalidRefreshToken: 'Invalid Refresh Token'
+      invalidRequest: 'Cannot validate request'
+      invalidSchema: 'No schema has been set for this user group'
+      invalidUserUpdate: 'We couldn''t update the user with the provided details'
+      jwtExpiration: '30 minutes'
+      jwtRefreshExpiration: '3 months'
+      jwtSecretKey: HmasVVZuLIGCKav9-mhsATSxPely2Ot4
+      passwordResetSent: 'You will receive an email if it matches an account in our system'
+      passwordSaved: 'Successfully saved password'
+      passwordUpdated: 'Successfully updated password'
+      permissionType: single
+      sameSitePolicy: strict
+      schemaId: '2'
+      siteId: null
+      tokenNotFound: 'We couldn''t find any matching tokens'
+      twitterApiKey: null
+      twitterApiKeySecret: null
+      twitterEmailMismatch: 'Email address doesn''t match allowed Twitter domains'
+      twitterRedirectUrl: null
+      userActivated: 'Successfully activated user'
+      userGroup: '3'
+      userNotActivated: 'Please activate your account before logging in'
+      userNotFound: 'We couldn''t find any matching users'
+      volumeNotFound: 'We couldn''t find any matching volumes'
   mollie-payments:
     edition: standard
     enabled: true
