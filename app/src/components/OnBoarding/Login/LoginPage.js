@@ -8,7 +8,7 @@ import AppError from '../../../core/error/AppError';
 import { getValidationErrors } from '../../../core/utils/validation';
 import ErrorAlert from '../../Shared/ErrorAlert';
 import { useMutation } from '@apollo/client';
-import GET_LOGIN from '../../GraphQL/users/GetLogin';
+import GET_LOGIN from '../../GraphQL/users/GET_LOGIN';
 import { Link } from 'react-router-dom';
 import { Routes } from '../../../core/routing';
 
@@ -17,7 +17,7 @@ let schema = yup.object().shape({
   password: yup.string().required(),
 });
 
-const LoginPage = ({ setUser, loginUser }) => {
+const LoginPage = ({ setUser }) => {
 
     const [data, setData] = useState({
         email: '',

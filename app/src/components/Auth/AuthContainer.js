@@ -41,7 +41,7 @@ const AuthContainer = () => {
             <Route path={Routes.Login}>
                 <LoginPage setUser={updateUser}/>
             </Route>
-            <Route path={Routes.Register}>
+            <Route path={Routes.Register} >
                 <RegisterPage setUser={updateUser}/>
             </Route>
             <Redirect to={Routes.Login} />

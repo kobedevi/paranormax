@@ -8,17 +8,25 @@ import AppError from '../../../core/error/AppError';
 import { getValidationErrors } from '../../../core/utils/validation';
 import ErrorAlert from '../../Shared/ErrorAlert';
 import { useMutation } from '@apollo/client';
-import GET_LOGIN from '../../GraphQL/users/GetLogin';
+import { Link } from 'react-router-dom';
+import { Routes } from '../../../core/routing';
+import REGISTER_USER from '../../GraphQL/users/REGISTER';
 
 let schema = yup.object().shape({
   email: yup.string().email().required(),
+  username: yup.string().required(),
+  firstName: yup.string().required(),
+  lastName: yup.string().required(),
   password: yup.string().required(),
 });
 
-const RegisterPage = ({ setUser, loginUser }) => {
+const RegisterPage = ({ setUser }) => {
 
     const [data, setData] = useState({
         email: '',
+        username: '',
+        firstName: '',
+        lastName: '',
         password: '',
     });
 
@@ -26,7 +34,7 @@ const RegisterPage = ({ setUser, loginUser }) => {
     const [error, setError] = useState();
 
 
-    const [getLogin] = useMutation(GET_LOGIN);
+    const [registerUser] = useMutation(REGISTER_USER);
 
     const handleChange = (e) => {
         setData({
@@ -39,15 +47,20 @@ const RegisterPage = ({ setUser, loginUser }) => {
         e.preventDefault();
         schema.validate(data,{abortEarly: false})
         .then(() => {
-            getLogin({
-                variables: { email:data.email, password:data.password },
-                onCompleted:({authenticate}) => {
-                    console.log(authenticate)
-                    setUser(authenticate)
+            registerUser({
+                variables: { 
+                    email: data.email, 
+                    password: data.password, 
+                    firstName: data.firstName,
+                    lastName: data.lastName,
+                    username: data.username
+                },
+                onCompleted:({register}) => {
+                    setUser(register)
                 }
             })
-            .catch(() => {
-                setError(new AppError('Wrong combination'));
+            .catch((e) => {
+                setError(new AppError(`Something went wrong: ${e.message}`));
             });
         }).catch((e) => {
             setErrors(getValidationErrors(e));
@@ -63,6 +76,9 @@ const RegisterPage = ({ setUser, loginUser }) => {
                     <form className={Styles['form-signin']} onSubmit={handleSubmit} noValidate={true}>
                         <h2 className="h3 mb-3 font-weight-normal">Please Register</h2>
                         <ErrorAlert error={error}></ErrorAlert>
+                        <Input label="Username" type="text" name="username" value={data.username} onChange={handleChange} error={errors.username} />
+                        <Input label="First Name" type="text" name="firstName" value={data.firstName} onChange={handleChange} error={errors.firstName} />
+                        <Input label="Last Name" type="text" name="lastName" value={data.lastName} onChange={handleChange} error={errors.lastName} />
                         <Input label="Email" type="email" name="email" value={data.email} onChange={handleChange} error={errors.email} />
                         <Input label="Password" type="password" name="password" value={data.password} onChange={handleChange} error={errors.password} />
                         <div className='specialButton'>
@@ -70,6 +86,10 @@ const RegisterPage = ({ setUser, loginUser }) => {
                                 <Button color="primary" type="submit">Register</Button>
                             </div>
                         </div>
+                        <p className="sign-up">
+                            Already have an Account?
+                            <Link className="nav-link" to={Routes.Login}>Login</Link>
+                        </p>
                     </form>
                 </div>
             </Container>
