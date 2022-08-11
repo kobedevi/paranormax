@@ -12,7 +12,6 @@ import {
 } from '@apollo/client';
 import { onError } from '@apollo/client/link/error'
 import { setContext } from '@apollo/client/link/context';
-import PreLoginNav from './components/App/Nav/PreLoginNav';
 
 const errorLink = onError(({ graphqlError, networkError}) => {
   if(graphqlError) {
@@ -46,7 +45,6 @@ root.render(
   <React.StrictMode>
     <Router>
       <ApolloProvider client={client}>
-        <PreLoginNav/>
         <AuthContainer />
       </ApolloProvider>
     </Router>

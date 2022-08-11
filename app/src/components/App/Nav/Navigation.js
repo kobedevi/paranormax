@@ -2,16 +2,12 @@ import { Link } from 'react-router-dom';
 import { Routes } from '../../../core/routing';
 
 const items = [{
-    'label': 'Login',
-    'route': Routes.Login,
+    'label': 'Missions',
+    'route': Routes.MissionsOverview,
     'icon': null,
 }, {
-    'label': 'Register',
-    'route': Routes.Register,
-    'icon': null,
-}, {
-    'label': 'something else',
-    'route': Routes.Register,
+    'label': 'Users',
+    'route': Routes.Users,
     'icon': null,
 }]
 
