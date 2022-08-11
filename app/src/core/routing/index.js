@@ -2,7 +2,10 @@ const Routes = Object.freeze({
     Login: '/login',
     Register: '/register',
 
-    MissionsOverview: '/missions'
+    MissionsOverview: '/missions',
+
+    Users: '/users',
+    UsersEdit: '/users/edit'
 });
 
 // replaces : values with values from object
