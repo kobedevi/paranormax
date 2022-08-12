@@ -14,7 +14,6 @@ function MissionsOverview() {
 
     return (
         <>
-            <LogoutButton/>
             <div>
                 <h1>MissionsPage</h1>
                 <ul>
@@ -27,6 +26,8 @@ function MissionsOverview() {
                 }
                 </ul>
             </div>
+
+            
         </>
     )
 }
