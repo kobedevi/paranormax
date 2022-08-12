@@ -4,6 +4,7 @@ import { LOAD_MISSIONS } from "../../GraphQL/Queries";
 import MissionCard from "../../Design/MissionCard";
 import Alert from '../../Design/Alert';
 import Spinner from '../../Design/Spinner';
+import MissionHeader from "./MissionHeader";
 
 function MissionsOverview() {
 
@@ -25,6 +26,7 @@ function MissionsOverview() {
                         </div>
                     </div>
                     <div>
+                        <MissionHeader/>
                         {
                             error && <Alert color="danger">{error.message}</Alert>
                         }
@@ -36,7 +38,9 @@ function MissionsOverview() {
                                 <ul className="no-bulletpoints row gx-5">
                                     {
                                         data.entries.map((mission) => (
-                                            <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
+                                            mission.missionStatus !== 'draft' && (
+                                                <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
+                                            )
                                         ))
                                     }
                                 </ul>

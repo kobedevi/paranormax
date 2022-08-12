@@ -61,17 +61,17 @@ const LoginPage = ({ setUser }) => {
             <Container>
                 <div className="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                     <div className="text-center mb-5">
-                        <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-lock"></i></div>
+                        <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i className="bi bi-lock"></i></div>
                         <h1 className="fw-bolder">Login</h1>
                     </div>
                     <div className='row gx-5 justify-content-center'>
-                        <div class="col-lg-8 col-xl-6">
+                        <div className="col-lg-8 col-xl-6">
                             <form onSubmit={handleSubmit} noValidate={true}>
                                 <ErrorAlert error={error}></ErrorAlert>
                                 <Input label="Email" type="email" name="email" value={data.email} onChange={handleChange} error={errors.email} />
                                 <Input label="Password" type="password" name="password" value={data.password} onChange={handleChange} error={errors.password} />
                                 <div className='d-grid'>
-                                    <Button color="primary" className="btn btn-primary btn-lg disabled" type="submit">Log in</Button>
+                                    <Button color="primary" className="btn btn-primary btn-lg" type="submit">Log in</Button>
                                 </div>
                                 <p className="sign-up py-2">
                                     Don&apos;t have an Account? <Link to={Routes.Register}>Register</Link>
