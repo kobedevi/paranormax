@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 
 export const LOAD_MISSIONS = gql`
 query {
@@ -27,9 +27,9 @@ query {
   }
 }`;
 
-export const LOAD_MISSION_ID = gql`
-query {
-  entries(section: "missions", id: "65") {
+const LOAD_MISSION_ID = gql`
+query GetMission($id: [QueryArgument]!){
+  entry(section: "missions", id: $id) {
     id
     title
     ... on missions_default_Entry {
@@ -55,3 +55,17 @@ query {
     }
   }
 }`;
+
+export const useMission = (id) => {
+  const {error, loading, data} = useQuery(LOAD_MISSION_ID, {
+      variables: {
+          id
+      }
+  })
+
+  return {
+      loading,
+      data,
+      error
+  }
+}
