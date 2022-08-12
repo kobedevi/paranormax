@@ -29,7 +29,6 @@ const AuthContainer = () => {
 
     if(user) {
         return (
-            console.log(user),
             <AuthContext.Provider value={{user, setUser: updateUser, logout}}>
                 <App/>
             </AuthContext.Provider>

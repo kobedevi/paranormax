@@ -5132,6 +5132,10 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+.no-bulletpoints {
+  list-style: none;
+}
+
 .card {
   position: relative;
   display: -webkit-box;
@@ -5247,6 +5251,17 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
+}
+
+.blog {
+  object-fit:cover;
+  height: 12rem;
+}
+
+.author-pic {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
 }
 
 .card-img,
