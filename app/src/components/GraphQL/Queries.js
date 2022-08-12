@@ -13,6 +13,7 @@ query {
           url
         }
       }
+			missionStatus
       shortDescription
       tagField {
         id

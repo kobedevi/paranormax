@@ -1,9 +1,8 @@
-import { useQuery } from "@apollo/client";
 import { useEffect } from "react";
 import { useMission } from "../../GraphQL/Queries";
 import Alert from '../../Design/Alert';
 import Spinner from '../../Design/Spinner';
-import { Router, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function MissionsDetail() {
     
@@ -37,22 +36,30 @@ function MissionsDetail() {
                     <section className="py-5">
                         <div className="container px-5 my-5">
                             <div className="row gx-5">
-                                
-                                        <div className="col-lg-3">
-                                            <div className="d-flex align-items-center mt-lg-5 mb-4">
-                                                <img className="img-fluid rounded-circle author-pic" src={data.entry.author.photo ? data.entry.author.photo.url : "http://localhost:8012/paranormax/web/uploads/_336x336_crop_center-center_65_none/user.svg"} alt="..."/>
-                                                <div className="ms-3">
-                                                    <div className="fw-bold">{data.entry.author.username}</div>
-                                                </div>
-                                            </div>
+                        
+                                <div className="col-lg-3">
+                                    <div className="d-flex align-items-center mt-lg-5 mb-4">
+                                        <img className="img-fluid rounded-circle author-pic" src={data.entry.author.photo ? data.entry.author.photo.url : "http://localhost:8012/paranormax/web/uploads/_336x336_crop_center-center_65_none/user.svg"} alt="..."/>
+                                        <div className="ms-3">
+                                            <div className="fw-bold">{data.entry.author.username}</div>
                                         </div>
+                                    </div>
+                                    <div className="row py-3">
+                                        {data.entry.missionStatus}
+                                        {
+                                            (data.entry.missionStatus !== 'success') && (
+                                                <button>Accept</button>
+                                            )
+                                        }
+                                    </div>
+                                </div>
                                     {
                                         data && (
-                                            <div class="col-lg-9">
+                                            <div className="col-lg-9">
                                                 <article>
-                                                    <header class="mb-4">
-                                                        <h1 class="fw-bolder mb-1">{data.entry.title}</h1>
-                                                        <div class="text-muted fst-italic mb-2">{new Date(data.entry.deadline).toLocaleDateString('en-UK', options)}</div>
+                                                    <header className="mb-4">
+                                                        <h1 className="fw-bolder mb-1">{data.entry.title}</h1>
+                                                        <div className="text-muted fst-italic mb-2">{new Date(data.entry.deadline).toLocaleDateString('en-UK', options)}</div>
                                                         {
                                                             data.entry.tagField && (
                                                                 data.entry.tagField.map((tag) => (
@@ -61,8 +68,8 @@ function MissionsDetail() {
                                                             )
                                                         }
                                                     </header>
-                                                    <figure class="mb-4"><img class="img-fluid rounded" src={data.entry.missionImage[0] ? data.entry.missionImage[0].url : "http://kodev.be/web/uploads/_750x500_crop_center-center_65_none/spooky.jpg"} alt="..." /></figure>
-                                                    <section class="mb-5">
+                                                    <figure className="mb-4"><img className="img-fluid rounded" src={data.entry.missionImage[0] ? data.entry.missionImage[0].url : "http://kodev.be/web/uploads/_750x500_crop_center-center_65_none/spooky.jpg"} alt="..." /></figure>
+                                                    <section className="mb-5">
                                                         <div dangerouslySetInnerHTML={{__html: data.entry.richText}}/>
                                                     </section>
                                                 </article>

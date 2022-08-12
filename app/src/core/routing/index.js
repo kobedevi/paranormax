@@ -3,6 +3,7 @@ const Routes = Object.freeze({
     Register: '/register',
 
     MissionsOverview: '/missions',
+    MissionCreate: '/missions/create',
     MissionDetail: '/missions/:id',
 
     Users: '/users',

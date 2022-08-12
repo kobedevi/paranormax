@@ -5264,6 +5264,10 @@ textarea.form-control-lg {
   object-fit: cover;
 }
 
+div.tox-notification{
+  display: none !important;
+}
+
 .card-img,
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
