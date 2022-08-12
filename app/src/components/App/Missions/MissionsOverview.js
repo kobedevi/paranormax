@@ -25,23 +25,23 @@ function MissionsOverview() {
                         </div>
                     </div>
                     <div>
-                            {
-                                error && <Alert color="danger">{error.message}</Alert>
-                            }
-                            {
-                                loading && <Spinner />
-                            }
-                            {
-                                data && (
-                                    <ul className="no-bulletpoints row gx-5">
-                                        {
-                                            data.entries.map((mission) => (
-                                                <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
-                                            ))
-                                        }
-                                    </ul>
-                                )
-                            }
+                        {
+                            error && <Alert color="danger">{error.message}</Alert>
+                        }
+                        {
+                            loading && <Spinner />
+                        }
+                        {
+                            data && (
+                                <ul className="no-bulletpoints row gx-5">
+                                    {
+                                        data.entries.map((mission) => (
+                                            <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
+                                        ))
+                                    }
+                                </ul>
+                            )
+                        }
                     </div>
                 </div>
             </section>
