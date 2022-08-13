@@ -1,0 +1,108 @@
+field: 5d0ab896-b6da-44a1-a339-de076a237c7e # Contact Blocks
+fieldLayouts:
+  d80b4c10-8287-4592-bebd-35b76e199d49:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 25086d3c-8142-4a60-9c92-12c16dd70156 # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 56ed6e29-085c-4de3-8349-9d20cdd89c55 # Contact Block Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3676f1ca-7bb7-45a2-be88-804b1037e14e # Contact Block Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  56ed6e29-085c-4de3-8349-9d20cdd89c55: # Contact Block Title
+    columnSuffix: null
+    contentColumnType: string(160)
+    fieldGroup: null
+    handle: contactBlockTitle
+    instructions: ''
+    name: 'Contact Block Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 40
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3676f1ca-7bb7-45a2-be88-804b1037e14e: # Contact Block Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: contactBlockContent
+    instructions: ''
+    name: 'Contact Block Content'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  25086d3c-8142-4a60-9c92-12c16dd70156: # Icon
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: icon
+    instructions: "Bootstrap icon class name\r\nEx: bi-1-square"
+    name: Icon
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: contactBlock
+name: 'Contact Block'
+sortOrder: 1

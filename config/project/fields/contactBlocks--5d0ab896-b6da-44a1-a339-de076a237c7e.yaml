@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: cbc6f4f5-dfe1-435d-8fe8-55975e97865c # Contact
+handle: contactBlocks
+instructions: ''
+name: 'Contact Blocks'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_contactblocks}}'
+  maxBlocks: '4'
+  minBlocks: '1'
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

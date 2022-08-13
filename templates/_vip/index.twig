@@ -12,48 +12,96 @@
     {% set payments = craft.payments.email(currentUser.email).status('paid').all() %}
     {% set image =  imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
 
-    {% if not payments %}
-        <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url({{ image }});">
-            <div class="container">
-                <div class="row align-items-center site-hero-inner justify-content-center">
-                    <div class="col-md-8 text-center">
-                        <div class="mb-5 element-animate">
-                            <h1>VIP PAYMENT</h1>
+    <!-- ======= spacing ======= -->
+        <section class="breadcrumbs" style="background:none">
+            
+        </section>
+    <!-- End spacing -->
+
+    <section id="recent-blog-posts" class="recent-blog-posts blog">
+
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+                {{entry.pageHeading}}
+            </header>
+            {% if not payments %}
+                <section class="site-section bg-light">
+
+                    <form method="post">
+                        {{ csrfInput() }}
+                        {{ actionInput("mollie-payments/payment/pay") }}
+                        {{ redirectInput("/web/") }}
+                        <input type="hidden" name="amount" value="{{ 5|hash }}">
+                        <input type="hidden" name="form" value="{{ 'formHandle'|hash }}">
+
+                        <div>
+                            <label for="email">{{ "E-mail"|t }}</label>
+                            <input type="email" id="email" name="email" value="{{ currentUser.email }}">
                         </div>
-                    </div>
+                        <div>
+                            <label for="firstName">{{ "First name"|t }}</label>
+                            <input type="text" id="firstName" name="fields[firstName]" value="{{ currentUser.firstName }}">
+                        </div>
+                        <div>
+                            <label for="lastName">{{ "Last name"|t }}</label>
+                            <input type="text" id="lastName" name="fields[lastName]" value="{{ currentUser.lastName }}">
+                        </div>
+
+                        <input type="submit" class="btn " value="{{ "Pay"|t }}">
+                    </form>
+                </section>
+            {% endif %}
+
+
+            {% set payments = craft.payments.email(currentUser.email).status('paid').all() %}
+            {% set payments = true %}
+            {% if payments %}
+                
+                {# VIP stories #}
+                {% paginate craft.entries({
+                    section: 'vipStories', 
+                }).limit(paginationLimit.paginationLimit) as pageInfo, missionEntries %}
+
+                <div class="row">
+                    {% for mission in missionEntries %}
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="post-box">
+                                {% set image = mission.missionImage.one().getUrl({ quality:65, width:750, height: 500}) ?? imageFallback.imageFallback.one().getUrl({ quality:65, width:750, height: 500}) %}
+                                <div class="post-img"><img src="{{ image }}" class="img-fluid" alt="{{mission.missionTitle}}" /></div>
+                                <span class="post-date">{{mission.deadline | date('D, F j Y')}}</span>
+                                <h3 class="post-title margin-reset">{{mission.missionTitle}}</h3>
+                                <p class="badges">
+                                    {% for tag in mission.tagField.all() %}
+                                        <span class="badge badge-primary">{{tag.title}}</span>
+                                    {% endfor %}
+                                </p>
+                                <div class="entry-content">
+                                <p>
+                                    {{mission.shortDescription}}
+                                </p>
+                            </div>
+                                <a href="{{ mission.url }}" class="readmore stretched-link mt-auto"><span>{{'Read More'|t}}</span><i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                    {% include "_includes/components/pagination.twig" with {
+                        pageInfo
+                    } %}
+
                 </div>
-            </div>
-        </section>
-        <section class="site-section bg-light">
 
-            <form method="post">
-                {{ csrfInput() }}
-                {{ actionInput("mollie-payments/payment/pay") }}
-                {{ redirectInput("/web") }}
-                <input type="hidden" name="amount" value="{{ 5|hash }}">
-                <input type="hidden" name="form" value="{{ 'formHandle'|hash }}">
-
-                <div>
-                    <label for="email">{{ "E-mail"|t }}</label>
-                    <input type="email" id="email" name="email" value="{{ currentUser.email }}">
-                </div>
-                <div>
-                    <label for="firstName">{{ "First name"|t }}</label>
-                    <input type="text" id="firstName" name="fields[firstName]" value="{{ currentUser.firstName }}">
-                </div>
-                <div>
-                    <label for="lastName">{{ "Last name"|t }}</label>
-                    <input type="text" id="lastName" name="fields[lastName]" value="{{ currentUser.lastName }}">
+                {# vip custom content #}
+                <div class="d-flex flex-wrap justify-content-center vipcontent">
+                {{entry.customContent}}
                 </div>
 
-                <input type="submit" class="btn " value="{{ "Pay"|t }}">
-            </form>
-        </section>
-    {% endif %}
+            {% endif %}
 
+        </div>
+    </section>
 
-    {% set payments = craft.payments.email(currentUser.email).status('paid').all() %}
-    {% if payments %}
-        payed
-    {% endif %}
 {% endblock %}
