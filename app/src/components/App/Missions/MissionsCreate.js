@@ -30,17 +30,12 @@ function MissionCreate() {
         deadline: ''
     });
 
-    const [localUser, setLocalUser] = useState(storage.getUser())
+    const [localUser] = useState(storage.getUser())
     const [errors, setErrors] = useState({});
-    const [error, setError] = useState();
+    const [error] = useState();
 
     // tinymce
     const editorRef = useRef(null);
-    const log = () => {
-        if (editorRef.current) {
-        console.log(editorRef.current.getContent());
-        }
-    };
 
     const [createMission] = useMutation(CREATE_MISSION);
 

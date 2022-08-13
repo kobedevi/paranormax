@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMission } from "../../GraphQL/Queries";
 import Alert from '../../Design/Alert';
 import Spinner from '../../Design/Spinner';
 import { useParams } from "react-router-dom";
+import isMedium from "../../../core/auth/utils";
+import { useAuth } from "../../Auth/AuthContainer";
+import { gql, useQuery } from "@apollo/client";
+import MissionAccept from "./MissionAccept";
 
 function MissionsDetail() {
     
@@ -10,9 +14,24 @@ function MissionsDetail() {
     const { id } = useParams();
     
     const {data, loading, error} = useMission(id)
+    const [userIsMedium, setUserIsMedium] = useState(false)
+
+    const GET_MEDIUMS = gql`
+        query getMediums {
+            users(group: "mediums") {
+                id
+                username
+            }
+        }
+    `;
+
+    const {errorMediums, loading: loadingMediums, data: mediums} = useQuery(GET_MEDIUMS)
 
     useEffect(() => {
-    }, [data])
+        if(mediums !== undefined) {
+            setUserIsMedium(isMedium(user, mediums.users))
+        }
+    }, [data, mediums])
 
     const options = {
         weekday: 'short',
@@ -20,6 +39,8 @@ function MissionsDetail() {
         day: 'numeric',
         year: 'numeric',
     }
+
+    const { user } = useAuth();
 
     return (
         <>
@@ -47,9 +68,7 @@ function MissionsDetail() {
                                     <div className="row py-3">
                                         {data.entry.missionStatus}
                                         {
-                                            (data.entry.missionStatus !== 'success') && (
-                                                <button>Accept</button>
-                                            )
+                                            ((data.entry.missionStatus !== 'success') & (userIsMedium)) ? <MissionAccept missionId={data.entry.id} userId={user.user.id}/> : null
                                         }
                                     </div>
                                 </div>

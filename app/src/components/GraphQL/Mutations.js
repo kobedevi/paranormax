@@ -1,4 +1,4 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql } from "@apollo/client";
 
 export const CREATE_MISSION = gql`
 mutation createMission(
@@ -13,3 +13,19 @@ mutation createMission(
     id
   }
 }`;
+
+export const ASSIGN_USER = gql`
+mutation assignUser($missionId: ID!, $assignee: [Int]) {
+  save_missions_default_Entry(id: $missionId, mediumQueue: $assignee, missionStatus: "pending") {
+    id,
+    ... on missions_default_Entry {
+      title
+      missionStatus
+      mediumQueue {
+        id,
+        name
+      }
+    }
+  }
+}
+`;
