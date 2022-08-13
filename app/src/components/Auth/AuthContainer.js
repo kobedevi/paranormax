@@ -16,6 +16,7 @@ const AuthContainer = () => {
         if(updatedUser) {
             storage.storeUserVariableData({'email': updatedUser.user.email, 'userName': updatedUser.user.username});
             storage.storeJWT(updatedUser.jwt);
+            
         } else {
             storage.storeUserVariableData(null);
             storage.storeJWT(null);
