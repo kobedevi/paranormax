@@ -1,0 +1,17 @@
+{% if data %}
+
+    {# default data if not filled in #}
+    {% set icon = data.icon ?? 'bi-geo-alt' %}
+    {% set title = data.title ?? 'no title' %}
+    {% set text = data.text ?? 'no data' %}
+
+    <div class="col-md-6">
+        <div class="info-box">
+            <i class="bi {{icon}}"></i>
+            <h3>{{title}}</h3>
+            <p>{{text |raw}}</p>
+        </div>
+    </div>
+
+
+{% endif %}
