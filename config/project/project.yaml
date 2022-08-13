@@ -1,4 +1,4 @@
-dateModified: 1660406457
+dateModified: 1660418333
 email:
   fromEmail: thegrandt06@gmail.com
   fromName: paranormax
@@ -112,6 +112,7 @@ meta:
     b269cf29-d375-43fc-bb81-ad78ca103bd1: Partner # Partner
     ba8b49fa-df74-4296-a43b-458f8d350fba: Required # Required
     bb8b993f-020a-4c6c-9a47-2132193b4e3c: Label # Label
+    bda75512-14cc-45bf-b874-c3018d858fd2: 'Medium Queue' # Medium Queue
     bf952d95-a6a0-4614-9049-eea5d63687bb: 'Mediums Queue' # Mediums Queue
     c4ed709c-0b3f-4857-9ca5-a55a007bc9d0: Homepage # Homepage
     c8c997ad-5dcf-4f5e-8b99-d4a1b3082cab: VIP # VIP

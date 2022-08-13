@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 38a1184a-1381-426c-a931-63707475a816 # Mission
+handle: mediumQueue
+instructions: ''
+name: 'Medium Queue'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources:
+    - admins
+    - 'group:e2048c77-84b6-4e9f-81b4-57f3096e1e08' # Mediums
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Users

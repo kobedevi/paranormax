@@ -55,7 +55,6 @@
 
 
             {% set payments = craft.payments.email(currentUser.email).status('paid').all() %}
-            {% set payments = true %}
             {% if payments %}
                 
                 {# VIP stories #}
