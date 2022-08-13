@@ -19,11 +19,10 @@ const Input = React.forwardRef(
         ref
     ) => {
         return (
-            <div className="form-group">
-                {label && <label htmlFor={name}>{label}:</label>}
+            <div className="form-floating mb-3">
                 <input
                     id={name}
-                    className={`form-control ${error ? 'is-invalid' : ''}`}
+                    className={`form-control ${error ? 'is-invalid' : ''} form-control`}
                     type={type}
                     name={name}
                     ref={ref}
@@ -35,6 +34,7 @@ const Input = React.forwardRef(
                     placeholder={placeholder}
                     {...rest}
                 />
+                {label && <label htmlFor={name}>{label}</label>}
                 {error && <div className="invalid-feedback">{error}</div>}
             </div>
         );

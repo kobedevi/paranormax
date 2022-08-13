@@ -1,32 +1,54 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { useEffect } from "react";
-import LogoutButton from "../../Auth/LogoutButton";
 import { LOAD_MISSIONS } from "../../GraphQL/Queries";
-
+import MissionCard from "../../Design/MissionCard";
+import Alert from '../../Design/Alert';
+import Spinner from '../../Design/Spinner';
+import MissionHeader from "./MissionHeader";
 
 function MissionsOverview() {
 
     const {error, loading, data} = useQuery(LOAD_MISSIONS)
 
     useEffect(() => {
-        console.log(data);
     }, [data])
 
     return (
         <>
-            <LogoutButton/>
-            <div>
-                <h1>MissionsPage</h1>
-                <ul>
-                {
-                    data && (
-                        data.entries.map((mission) => (
-                            <li key={mission.id}>{mission.title}</li>
-                        ))
-                    )
-                }
-                </ul>
-            </div>
+            <section className="py-5">
+                <div className="container px-5 my-5">
+                <div className="row gx-5 justify-content-center">
+                        <div className="col-lg-8 col-xl-6">
+                            <div className="text-center">
+                                <h2 className="fw-bolder">MISSIONS</h2>
+                                <p className="lead fw-normal text-muted mb-5">Collection of all our missions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <MissionHeader/>
+                        {
+                            error && <Alert color="danger">{error.message}</Alert>
+                        }
+                        {
+                            loading && <Spinner />
+                        }
+                        {
+                            data && (
+                                <ul className="no-bulletpoints row gx-5">
+                                    {
+                                        data.entries.map((mission) => (
+                                            mission.missionStatus !== 'draft' && (
+                                                <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
+                                            )
+                                        ))
+                                    }
+                                </ul>
+                            )
+                        }
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

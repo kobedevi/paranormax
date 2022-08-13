@@ -2,9 +2,13 @@ import PropTypes from 'prop-types';
 
 const Spinner = ({ color = 'primary' }) => {
     return (
-        <div className={`spinner-border text-${color}`} role="status">
-            <span className="sr-only">Loading...</span>
-        </div>
+        <section className="py-5">
+            <div className="container px-5 my-5">
+                <div className={`spinner-border text-${color}`} role="status">
+                    <span className="sr-only"></span>
+                </div>
+            </div>
+        </section>
     );
 };
 
