@@ -374,6 +374,11 @@ section {
   right: 15px;
 }
 
+.vipcontent *{
+  width: 100%;
+  text-align: center;
+}
+
 .navbar-mobile ul {
   display: block;
   position: absolute;

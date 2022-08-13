@@ -1,8 +1,18 @@
-dateModified: 1660232558
+dateModified: 1660406457
 email:
-  fromEmail: k@k.com
+  fromEmail: thegrandt06@gmail.com
   fromName: paranormax
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    encryptionMethod: tls
+    host: email-smtp.us-east-1.amazonaws.com
+    password: BG8DLbImrlBUtq+t5vbt1Ki7UZ1t0uwmWkYlAPC9JOLV
+    port: '587'
+    timeout: '10'
+    useAuthentication: '1'
+    username: AKIA2S5TZFL32DS2B3VD
+  transportType: craft\mail\transportadapters\Smtp
 meta:
   __names__:
     0b17ccce-0cf2-465a-9942-ad0cce43d49e: 'Initial Rows' # Initial Rows
@@ -25,8 +35,8 @@ meta:
     4ffaf42f-75bc-49b5-acf3-14844446e5ca: Handle # Handle
     5a232fcc-f94f-4553-b73e-f1c430d22f06: Contact # Contact
     5aaf1459-99d7-4cc4-a294-48eb45020f2e: Handle # Handle
-    5b9823c5-acde-43c1-bd3a-55f80edc20da: 'Subscription Plan' # Subscription Plan
     5c71d366-02b0-45cd-9b29-dce926e955fb: Options # Options
+    5d0ab896-b6da-44a1-a339-de076a237c7e: 'Contact Blocks' # Contact Blocks
     6d8ff214-5f89-4d71-aca3-783bb085ca12: 'Image Fallback' # Image Fallback
     6dc508a7-7121-4dd3-a83e-4ca13c7b7ebf: craft # craft
     7ad53e3f-823e-4797-824a-190430ad474c: 'Setup Fee' # Setup Fee
@@ -36,9 +46,9 @@ meta:
     8d683f57-5a84-4647-bfde-84cd56e9f313: Register # Register
     8eabf134-d6fa-49cd-973b-e25921ceddd9: 'Custom Label' # Custom Label
     8edc8321-f61a-465b-ae54-97a0b205b412: Default # Default
+    9a027a95-84a1-43ce-af50-96e5f3923f11: Default # Default
     9a53e480-7825-4274-8db1-803f1663eb1a: 'Hidden Value' # Hidden Value
     9a647386-7b45-4688-8a57-f32a09bcaafb: Homepage # Homepage
-    9adb55c9-db40-4ffc-9d2a-ca4795f3f31c: Paragraph # Paragraph
     9b7a4407-37d7-4007-9ba4-1b83b3401d5f: Label # Label
     9bd0e6c0-30ab-46b8-833a-78fc011625d7: Label # Label
     9c69a4e9-5989-4f93-97e0-5b37ae3f0002: 'Basic Form Fields' # Basic Form Fields
@@ -52,9 +62,10 @@ meta:
     38b129f0-1856-4126-bc60-d5961302c76e: 'Missions Listing' # Missions Listing
     38d1940e-c00c-42e8-804a-e65e4f7b68ff: Required # Required
     45aba986-67e5-4410-9e78-1296cf93f459: Reviews # Reviews
-    047b738e-cd66-418a-ae24-af489de27927: Dropdown # Dropdown
     49b1289d-b21d-46d9-a0d9-6c6c050fc66b: 'General Image Fallback' # General Image Fallback
     53e5b3ad-dde8-4060-9cea-59e49a00e4db: Contact # Contact
+    55dce432-0412-4fef-b4e8-07aa6bd5a955: 'VIP Content' # VIP Content
+    56ed6e29-085c-4de3-8349-9d20cdd89c55: 'Contact Block Title' # Contact Block Title
     63c94632-31e2-4267-94ec-9b2e1cc4f7d6: 'Rich Text' # Rich Text
     073bf6eb-4869-400c-8923-f128ec493ed8: Handle # Handle
     77b7874a-949c-427f-b2cd-d916d5322190: Options # Options
@@ -62,20 +73,23 @@ meta:
     81c0c49d-3126-4664-b4a1-ef1a1f3afb27: Homepage # Homepage
     87fe426b-8309-4fda-9505-c6134aec1419: 'Short Description' # Short Description
     90b2d072-fa0e-4682-9e02-ccc4336cc75e: 'Partner Logo' # Partner Logo
-    98fc1f1b-bdf2-4f1c-8964-43da862cfbad: 'Radio Buttons' # Radio Buttons
     136f0ed2-4e5b-4c5e-a663-3c164113fdf5: Required # Required
     218f7d4f-7514-47ab-a3f1-eae04f8c6513: Login # Login
     432d3808-7347-4e0f-9319-30e1b9267139: 'Mission Image' # Mission Image
     450e9eae-4f9e-4cc3-810a-51dd0b929320: 'Menu Label' # Menu Label
     480f298c-8b76-4ed1-919c-d9d3a2cebd76: Required # Required
+    592d346d-3d64-4894-b222-0ffb3ae8c7df: 'Contact Block' # Contact Block
     949cb20c-16fe-4890-ac92-9f1eff1e986c: Destination # Destination
     955edc4f-19af-4537-b30e-4100e2cf4060: 'Review Heading' # Review Heading
     988d7fe1-6ad7-4a6d-9a5c-480bd13f8694: 'Mission Tag' # Mission Tag
     2025e822-001b-4fe4-bfa1-3a48415cad07: Destination # Destination
     2560cb9a-44d2-4de4-8800-ca8c910e6bd7: 'Page Heading' # Page Heading
     2725c006-6221-4c8f-a368-8ba20a1d2ae9: 'Recent Missions Title' # Recent Missions Title
+    3676f1ca-7bb7-45a2-be88-804b1037e14e: 'Contact Block Content' # Contact Block Content
+    4536aaf8-d823-440b-8df5-be2bcd40ca36: 'VIP Stories' # VIP Stories
     4949d671-6969-459e-a869-9454e2f27a0a: 'Add Plan' # Add Plan
     9082f0ac-ff2c-48bb-bd86-388de3ff4568: Placeholder # Placeholder
+    25086d3c-8142-4a60-9c92-12c16dd70156: Icon # Icon
     27081b30-a9b1-43d4-94c5-60e38c61b511: 'Profile Info' # Profile Info
     29342b59-f4ec-4087-85a1-1c4a64b05353: 'Profile Info' # Profile Info
     65106a5d-b246-4bbb-93b1-b7fc8b867053: 'Pagination Limit' # Pagination Limit
@@ -94,8 +108,8 @@ meta:
     ac9329da-7d55-487f-a4b2-49179ad054b5: Destination # Destination
     b8cc4129-896c-4a08-97ec-4daea2e81855: Register # Register
     b88f7036-1b6c-4e4e-9a48-60ec011e3777: Rating # Rating
+    b90d1a76-f7d4-4ec7-b033-35295bc63e48: 'Contact Info' # Contact Info
     b269cf29-d375-43fc-bb81-ad78ca103bd1: Partner # Partner
-    b51367c1-4d49-4b11-ab43-ea56e6c00858: Number # Number
     ba8b49fa-df74-4296-a43b-458f8d350fba: Required # Required
     bb8b993f-020a-4c6c-9a47-2132193b4e3c: Label # Label
     bf952d95-a6a0-4614-9049-eea5d63687bb: 'Mediums Queue' # Mediums Queue
@@ -105,22 +119,21 @@ meta:
     c26437b6-6d58-4290-8d0b-799506f2776f: Label # Label
     c9730088-a7be-44cb-b088-f2b502b271b5: 'Hero Title' # Hero Title
     ca1f8b86-1417-4253-b735-8b94c98fe351: 'Tag Field' # Tag Field
+    cbc6f4f5-dfe1-435d-8fe8-55975e97865c: Contact # Contact
     cf75ce3f-9af3-4777-9e98-b750e82a0099: Footer # Footer
     d05f331b-a986-43d1-b531-24faf2fe66ab: Uploads # Uploads
     d08a52d7-b81a-481f-b10d-f051e701525a: 'Missions Listing' # Missions Listing
-    d7b24000-1a13-4ee7-9f8e-ede7d21049c3: Hidden # Hidden
     d46ef333-3626-49e3-97c5-972bcd3319e0: Login # Login
     da009cfa-0fb2-4b88-8dc2-b36ecefb962e: 'Menu Items' # Menu Items
     dcf13bfc-ac9a-49de-8a86-ff3b7bed8647: 'Menu Label' # Menu Label
     dd4c832f-013d-40f3-8504-ac892ab4e12a: 'About Image' # About Image
     ddac7416-7008-4913-9f41-4a1ca1963477: Options # Options
-    e6c56316-4172-45f6-a664-faf91049cf68: CheckBoxes # CheckBoxes
     e87e65cf-3015-436b-8b7a-7c794debe425: 'Short Description' # Short Description
+    e306e778-1d29-47b7-b017-36607e1f821f: 'Custom Content' # Custom Content
     e2048c77-84b6-4e9f-81b4-57f3096e1e08: Mediums # Mediums
     eab35bb1-5fb5-4f4b-b47d-abf56fbfc46d: 'Private Schema' # Private Schema
     ef2003a7-8d54-4878-abdd-dd55e978fa1a: paranormax # paranormax
     f4e30cad-4b29-425b-a7f8-15ca11c7ffd8: Label # Label
-    f49c901e-2b53-4ce6-819a-8fc414143ba7: 'Single Line' # Single Line
     f941304a-c434-4951-9b12-20fe6adef532: 'Profile Picture' # Profile Picture
     fa76bb61-2adf-4be8-8d1f-ada647f07809: Members # Members
     fd3ab4f4-8ee6-430d-867c-cc7b6900f1f4: Handle # Handle
@@ -130,92 +143,92 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  enupal-stripe:
+  freeform:
     edition: pro
     enabled: true
-    licenseKey: 5VBUJI2AYGJ23N42XBLYIYON
-    schemaVersion: 4.0.0
+    licenseKey: S4Z9WMXWMV4YTMD54CNTL7VK
+    schemaVersion: 3.6.4
     settings:
-      adminNotificationRecipients: null
-      adminNotificationReplyToEmail: null
-      adminNotificationSenderEmail: null
-      adminNotificationSenderName: null
-      adminNotificationSubject: null
-      adminNotificationTemplate: null
-      adminTemplateOverride: null
-      cancelAtPeriodEnd: false
-      capture: '1'
-      cartAllowPromotionCodes: false
-      cartAutomaticTax: false
-      cartCancelUrl: ''
-      cartCurrency: USD
-      cartEnableBillingAddress: false
-      cartEnableShippingAddress: false
-      cartLanguage: auto
-      cartPaymentMethods:
-        - card
-      cartSubmitType: null
-      cartSuccessUrl: ''
-      chargeDescription: 'Order from {email}'
-      chargeType: null
-      currentUserEmail: 1
-      customPlanName: 'Custom Plan - {planId}'
-      customerNotificationReplyToEmail: null
-      customerNotificationSenderEmail: null
-      customerNotificationSenderName: null
-      customerNotificationSubject: null
-      customerNotificationTemplate: null
-      customerTemplateOverride: null
-      defaultCurrency: USD
-      displayTaxLabel: 0
-      enableAdminNotification: null
-      enableConnect: ''
-      enableCustomerNotification: null
-      enableTaxes: 0
-      enableVendorNotification: 0
-      globalRate: '1'
-      liveClientId: null
-      livePublishableKey: ''
-      liveSecretKey: ''
-      liveWebhookSigningSecret: null
-      loadCss: 1
-      loadJquery: 1
-      oneTimeSetupFeeLabel: 'One time set-up fee'
-      plansWithNickname: 0
-      returnUrl: null
-      syncDefaultFormId: null
-      syncDefaultStatusId: null
-      syncEnabledDateRange: false
-      syncEndDate: null
-      syncIfUserExists: false
-      syncLimit: 500
-      syncStartDate: null
-      syncType: 1
-      tax: null
-      taxType: 0
-      testClientId: null
-      testMode: '1'
-      testPublishableKey: pk_test_51LUY2MLSzoNyINybysyuk1rGwChCrPapFZMFNsCAFMx79bEKcTnaPhJZpWVuaMhFmlnp1d15VdrUgvtMt0QbqIdC00UCLubnkL
-      testSecretKey: sk_test_51LUY2MLSzoNyINybYm5OWRGOyxr6Kn4xt8LD3vCsvi1m1TZu6EQY8IEfsvMgibil8u0eTttYnGsTQK7ayeYQiFD400ZQo2d9MX
-      testWebhookSigningSecret: null
-      updateCustomerEmailOnStripe: 0
-      useSca: ''
-      vendorNameFormat: ''
-      vendorNotificationReplyToEmail: null
-      vendorNotificationSenderEmail: null
-      vendorNotificationSenderName: null
-      vendorNotificationSubject: null
-      vendorNotificationTemplate: null
-      vendorPaymentType: manually
-      vendorSkipAdminReview: 0
-      vendorTemplateOverride: null
-      vendorUserFieldId: ''
-      vendorUserGroupId: ''
-  formie:
-    edition: standard
-    enabled: true
-    licenseKey: VFEBH318NXC3MY9WWDM7O3J7
-    schemaVersion: 1.2.8
+      ajaxByDefault: true
+      alertNotificationRecipients: null
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: true
+      defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: null
+      displayFeed: true
+      emailTemplateDirectory: null
+      emailTemplateStorage: db
+      exportHandlesAsNames: false
+      exportLabels: false
+      fieldDisplayOrder: name
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: false
+      formSubmitDisable: true
+      formSubmitExpiration: null
+      formTemplateDirectory: null
+      formattingTemplate: flexbox.html
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: false
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: null
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: null
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: null
+      recaptchaLazyLoad: false
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v2_checkbox
+      rememberPageSubmitOrder: true
+      removeNewlines: false
+      renderFormHtmlInCpViews: true
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: false
+      spamFolderEnabled: true
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: true
   graphql-authentication:
     edition: standard
     enabled: true

@@ -1,0 +1,19 @@
+fieldLayouts:
+  cd692d5f-deba-423a-8dc1-a1bf8445321d:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5d0ab896-b6da-44a1-a339-de076a237c7e # Contact Blocks
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: contactInfo
+name: 'Contact Info'
+sortOrder: 5
