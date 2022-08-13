@@ -5134,6 +5134,7 @@ textarea.form-control-lg {
 
 .no-bulletpoints {
   list-style: none;
+  padding: 0;
 }
 
 .card {
