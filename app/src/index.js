@@ -24,7 +24,7 @@ const errorLink = onError(({ graphqlError, networkError}) => {
 
 const link = from([
   errorLink,
-  new HttpLink({uri:"http://kodev.be/web/api"})
+  new HttpLink({uri:"https://kodev.be/web/api"})
 ])
 
 const authLink = setContext((_, { headers }) => {
