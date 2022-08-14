@@ -23,6 +23,13 @@ const BecomeMedium = () => {
         }
     }, [mediums, user])
 
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        
+    }
+
+
     return(
         <>
         {
