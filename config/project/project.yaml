@@ -1,4 +1,4 @@
-dateModified: 1660418333
+dateModified: 1660503897
 email:
   fromEmail: thegrandt06@gmail.com
   fromName: paranormax
@@ -246,13 +246,29 @@ plugins:
       appleRedirectUrl: null
       appleServiceId: null
       appleServiceSecret: null
-      assetMutations: null
+      assetMutations:
+        __assoc__:
+          -
+            - uploads
+            - ''
       assetNotFound: 'We couldn''t find any matching assets'
-      assetQueries: null
+      assetQueries:
+        __assoc__:
+          -
+            - uploads
+            - ''
       emailNotInScope: 'No email in scope'
-      entryMutations: null
+      entryMutations:
+        __assoc__:
+          -
+            - missions
+            - ''
       entryNotFound: 'We couldn''t find any matching entries'
-      entryQueries: null
+      entryQueries:
+        __assoc__:
+          -
+            - missions
+            - ''
       facebookAppId: null
       facebookAppSecret: null
       facebookEmailMismatch: 'Email address doesn''t match allowed Facebook domains'
@@ -276,6 +292,12 @@ plugins:
                   - assignedTo
                   - queryMutate
                 -
+                  - contactBlocks
+                  - queryMutate
+                -
+                  - customContent
+                  - queryMutate
+                -
                   - deadline
                   - queryMutate
                 -
@@ -292,6 +314,9 @@ plugins:
                   - queryMutate
                 -
                   - heroTitle
+                  - queryMutate
+                -
+                  - mediumQueue
                   - queryMutate
                 -
                   - menuItems
@@ -358,6 +383,12 @@ plugins:
                   - assignedTo
                   - queryMutate
                 -
+                  - contactBlocks
+                  - queryMutate
+                -
+                  - customContent
+                  - queryMutate
+                -
                   - deadline
                   - queryMutate
                 -
@@ -374,6 +405,9 @@ plugins:
                   - queryMutate
                 -
                   - heroTitle
+                  - queryMutate
+                -
+                  - mediumQueue
                   - queryMutate
                 -
                   - menuItems
@@ -428,7 +462,38 @@ plugins:
       googleClientId: null
       googleEmailMismatch: 'Email address doesn''t match allowed Google domains'
       googleTokenIdInvalid: 'Invalid Google Token ID'
-      granularSchemas: null
+      granularSchemas:
+        __assoc__:
+          -
+            - group-1
+            -
+              __assoc__:
+                -
+                  - schemaId
+                  - ''
+                -
+                  - allowRegistration
+                  - ''
+          -
+            - group-4
+            -
+              __assoc__:
+                -
+                  - schemaId
+                  - ''
+                -
+                  - allowRegistration
+                  - ''
+          -
+            - group-3
+            -
+              __assoc__:
+                -
+                  - schemaId
+                  - ''
+                -
+                  - allowRegistration
+                  - ''
       invalidEmailAddress: 'Invalid email address'
       invalidHeader: 'Invalid Authorization Header'
       invalidJwtSecretKey: 'Invalid JWT Secret Key'
