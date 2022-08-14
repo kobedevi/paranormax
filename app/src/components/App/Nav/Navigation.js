@@ -8,9 +8,13 @@ const items = [{
     'route': Routes.MissionsOverview,
     'icon': null,
 }, {
-    'label': 'Profile',
+    'label': 'Your missions',
     'route': Routes.Profile,
     'icon': null,
+}, {
+    'label': 'History',
+    'route': Routes.History,
+    'icon': null, 
 }]
 
 const Navigation = () => {
@@ -24,7 +28,6 @@ const Navigation = () => {
     const show = (showCollapsedMenu) ? "show" : "" ;
 
     return (
-        
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
             <div className='container px-5'>
                 <Link className="navbar-brand" to={Routes.MissionsOverview}>Paranormax</Link>

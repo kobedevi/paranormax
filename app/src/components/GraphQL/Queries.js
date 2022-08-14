@@ -110,6 +110,36 @@ query GetCandidatesForMission($id: [QueryArgument]!){
   }
 }`;
 
+export const GET_USER_HISTORY = gql`
+query {
+  entries(section: "missions") {
+    authorId
+    title
+    ... on missions_default_Entry {
+      id
+      author {
+        username
+        photo {
+          url
+        }
+      }
+			missionStatus
+      richText
+      tagField {
+        title
+      }
+      missionImage {
+        url
+      }
+      deadline
+      assignedTo {
+        id
+        username
+      }
+    }
+  }
+}`;
+
 export const useMission = (id) => {
   const {error, loading, data} = useQuery(LOAD_MISSION_ID, {
       variables: {

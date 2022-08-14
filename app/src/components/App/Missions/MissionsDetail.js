@@ -68,13 +68,15 @@ function MissionsDetail() {
                                     <div className="row py-3">
                                         {data.entry.missionStatus}
                                         {
+                                            // if not in state pending or searching, user is a medium and user is not the author
                                             ((data.entry.missionStatus === 'pending' || 'searching') & (userIsMedium) & (parseInt(data.entry.authorId) !== parseInt(user.user.id))) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
                                         }
                                         {
+                                            // if user is the author and there are candidates
                                             ((parseInt(data.entry.authorId) === parseInt(user.user.id)) && data.entry.mediumQueue.length > 0) ? <Candidates/> : null
                                         }
                                         {
-                                            // if you're the author or accepted medium show this card
+                                            // if user is the author or the accepted medium
                                             ((parseInt(data.entry.authorId) === parseInt(user.user.id)) || data.entry.assignedTo.some((medium) => parseInt(medium.id) === parseInt(user.user.id))) && data.entry.assignedTo.length > 0 ? <Candidates accepted={data.entry.assignedTo}/> : null
                                         }
                                     </div>
