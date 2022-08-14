@@ -1,50 +1,80 @@
 import { useMutation } from "@apollo/client";
 import { useState } from "react"
+import Alert from "../../Design/Alert";
 import { ASSIGN_USER } from "../../GraphQL/Mutations";
-import ErrorAlert from "../../Shared/ErrorAlert";
 
-const MissionAccept = ({missionId, userId}) => {
+const MissionAccept = ({missionId, userId, mediumQueue}) => {
 
-    const [buttonText, setButtonText] = useState(true)
     const [buttonDisabled, setButtonDisabled] = useState(false)
     const [error, setError] = useState()
 
     const [assignUser] = useMutation(ASSIGN_USER);
-    
+
+    console.log(`Current queue: `)
+    console.log(mediumQueue)
 
     const acceptOrDeny = (e) => {
         e.preventDefault()
-        acceptMission()
+
+        // denyMission
+        let tempArray = [];
+        
+        // let tempArray = [...mediumQueue];
+        if(mediumQueue.some((medium) => medium.id === userId)) {
+            const userIndexInQueue = mediumQueue.findIndex(x => x.id === userId);
+            mediumQueue.map((medium, index) => {
+                if(userIndexInQueue !== index) {
+                    tempArray.push(parseInt(medium.id))
+                }
+            })
+            toggleAcceptOrDenyMission(tempArray)
+        }
+        // accept 
+        else {
+            mediumQueue.map((medium) => {
+                tempArray.push(parseInt(medium.id))
+            })
+            tempArray.push(parseInt(userId))
+            toggleAcceptOrDenyMission(tempArray);
+        }
     }
 
-    const acceptMission = () => {
+    const toggleAcceptOrDenyMission = (userQueue) => {
         setButtonDisabled(!buttonDisabled)
         console.log(`${missionId} ${userId}`)
         assignUser({
             variables: {
                 missionId,
-                assignee: parseInt(userId)
+                assignee: userQueue
             }, onCompleted:(returnValue) => {
                 console.log(returnValue)
-                setButtonText(!buttonText)
                 setButtonDisabled(false)
             }
         }).catch((e) =>{
             setError(e)
-            setButtonDisabled(false)
+            setButtonDisabled(!buttonDisabled)
         })
     }
 
-    return (
-        <>
-            {
-                error && (
-                    <ErrorAlert error={error} />
-                )
-            }
-            <button onClick={acceptOrDeny} disabled={buttonDisabled}>{buttonText ? 'Request mission' : 'Cancel request'}</button>
-        </>
-    )
+    if(mediumQueue.some((medium) => medium.id === userId)) {
+        return (
+            <>
+                {
+                    error && <Alert color="danger">{error.message}</Alert>
+                }
+                <button onClick={acceptOrDeny} disabled={buttonDisabled}>Cancel request</button>
+            </>
+        )
+    } else {
+        return (
+            <>
+                {
+                    error && <Alert color="danger">{error.message}</Alert>
+                }
+                <button onClick={acceptOrDeny} disabled={buttonDisabled}>Request mission</button>
+            </>
+        )
+    }
 
 }
 

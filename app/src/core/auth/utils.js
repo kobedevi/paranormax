@@ -1,4 +1,4 @@
-function isInArray(arr=[], userId) {
+const isInArray = (arr=[], userId) => {
     const found = arr.some(el => el.id === userId);
     return found;
 }

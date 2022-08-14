@@ -27,5 +27,6 @@ mutation assignUser($missionId: ID!, $assignee: [Int]) {
       }
     }
   }
-}
-`;
+}`;
+
+export const REMOVE_USER = ASSIGN_USER

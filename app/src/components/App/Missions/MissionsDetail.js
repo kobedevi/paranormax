@@ -20,7 +20,6 @@ function MissionsDetail() {
         query getMediums {
             users(group: "mediums") {
                 id
-                username
             }
         }
     `;
@@ -68,7 +67,7 @@ function MissionsDetail() {
                                     <div className="row py-3">
                                         {data.entry.missionStatus}
                                         {
-                                            ((data.entry.missionStatus !== 'success') & (userIsMedium)) ? <MissionAccept missionId={data.entry.id} userId={user.user.id}/> : null
+                                            ((data.entry.missionStatus !== 'success') & (userIsMedium)) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
                                         }
                                     </div>
                                 </div>

@@ -50,6 +50,9 @@ query GetMission($id: [QueryArgument]!){
         url
       }
       deadline
+      mediumQueue {
+				id
+			}
       assignedTo {
         username
       }
