@@ -15,6 +15,10 @@ const items = [{
     'label': 'History',
     'route': Routes.History,
     'icon': null, 
+}, {
+    'label': 'Become medium',
+    'route': Routes.ProfileMedium,
+    'icon': null, 
 }]
 
 const Navigation = () => {

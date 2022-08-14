@@ -9,6 +9,7 @@ const Routes = Object.freeze({
     Profile: '/user',
     ProfileMissions: '/user/missions',
     ProfileEdit: '/user/edit',
+    ProfileMedium: '/user/medium',
 
     History: '/history',
 });
