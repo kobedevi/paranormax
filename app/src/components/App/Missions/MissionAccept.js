@@ -10,9 +10,6 @@ const MissionAccept = ({missionId, userId, mediumQueue}) => {
 
     const [assignUser] = useMutation(ASSIGN_USER);
 
-    console.log(`Current queue: `)
-    console.log(mediumQueue)
-
     const acceptOrDeny = (e) => {
         e.preventDefault()
 
@@ -41,13 +38,11 @@ const MissionAccept = ({missionId, userId, mediumQueue}) => {
 
     const toggleAcceptOrDenyMission = (userQueue) => {
         setButtonDisabled(!buttonDisabled)
-        console.log(`${missionId} ${userId}`)
         assignUser({
             variables: {
                 missionId,
                 assignee: userQueue
-            }, onCompleted:(returnValue) => {
-                console.log(returnValue)
+            }, onCompleted:() => {
                 setButtonDisabled(false)
             }
         }).catch((e) =>{
