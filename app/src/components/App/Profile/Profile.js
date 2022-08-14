@@ -1,17 +1,17 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Routes } from '../../../core/routing';
-import EditUser from './EditUser';
+import ProfileMissionsOverview from './ProfileMissionsOverview';
 
-function Users() {
+function Profile() {
     return (
         <Switch>
             <Route path={Routes.UsersEdit}>
-                <EditUser />
+                <ProfileMissionsOverview />
             </Route>
-            <Redirect to={Routes.UsersEdit} />
+            <Redirect to={Routes.ProfileMissions} />
         </Switch>
     );
 }
 
-export default Users
+export default Profile

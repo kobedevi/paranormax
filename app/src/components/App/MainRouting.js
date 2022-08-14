@@ -1,7 +1,7 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { Routes } from '../../core/routing';
 import Missions from './Missions/Missions';
-import Users from './Users/Users';
+import Profile from './Profile/Profile';
 
 
 const MainRouting = () => {   
@@ -11,8 +11,8 @@ const MainRouting = () => {
             <Route path={Routes.MissionsOverview}>
                 <Missions />
             </Route>
-            <Route path={Routes.Users}>
-                <Users/>
+            <Route path={Routes.Profile}>
+                <Profile/>
             </Route>
             <Redirect to={Routes.MissionsOverview} />
         </Switch>

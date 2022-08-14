@@ -6,8 +6,9 @@ const Routes = Object.freeze({
     MissionCreate: '/missions/create',
     MissionDetail: '/missions/:id',
 
-    Users: '/users',
-    UsersEdit: '/users/edit'
+    Profile: '/user',
+    ProfileMissions: '/user/missions',
+    ProfileEdit: '/user/edit'
 });
 
 // replaces : values with values from object

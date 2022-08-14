@@ -29,4 +29,21 @@ mutation assignUser($missionId: ID!, $assignee: [Int]) {
   }
 }`;
 
-export const REMOVE_USER = ASSIGN_USER
+export const ASSIGN_USER_ACCEPT = gql`
+mutation assignUser($missionId: ID!, $assignee: [Int]) {
+  save_missions_default_Entry(id: $missionId, mediumQueue: [], missionStatus: "accepted", assignedTo: $assignee) {
+    id,
+    ... on missions_default_Entry {
+      title
+      missionStatus
+      assignedTo {
+        id,
+        name
+      }
+      mediumQueue {
+        id,
+        name
+      }
+    }
+  }
+}`;

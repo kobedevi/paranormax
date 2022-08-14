@@ -35,6 +35,7 @@ query GetMission($id: [QueryArgument]!){
     title
     ... on missions_default_Entry {
       id
+      authorId
       author {
         username
         photo {
@@ -54,8 +55,54 @@ query GetMission($id: [QueryArgument]!){
 				id
 			}
       assignedTo {
+        username,
+        email
+      }
+    }
+  }
+}`;
+
+export const GET_USER_CREATED_MISSIONS = gql`
+query GetMissionsByUserId($id: [QueryArgument]!){
+  entries(section: "missions", authorId: $id) {
+    authorId
+    title
+    ... on missions_default_Entry {
+      id
+      author {
+        username
+        photo {
+          url
+        }
+      }
+			missionStatus
+      richText
+      tagField {
+        title
+      }
+      missionImage {
+        url
+      }
+      deadline
+			mediumQueue {
+				id
+			}
+      assignedTo {
         username
       }
+    }
+  }
+}`
+
+export const GET_CANDIDATES_FOR_MISSION = gql`
+query GetCandidatesForMission($id: [QueryArgument]!){
+  entry(section: "missions", id: $id) {
+    ... on missions_default_Entry {
+      mediumQueue {
+				id,
+				username,
+				email
+			}
     }
   }
 }`;

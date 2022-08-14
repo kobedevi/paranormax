@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { route, Routes } from '../../core/routing'
 
-function MissionCard({mission}) {    
+function MissionCard({mission, reRenderer=null}) {    
 
     const options = {
         weekday: 'short',

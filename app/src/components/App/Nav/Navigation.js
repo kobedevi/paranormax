@@ -8,8 +8,8 @@ const items = [{
     'route': Routes.MissionsOverview,
     'icon': null,
 }, {
-    'label': 'Users',
-    'route': Routes.Users,
+    'label': 'Profile',
+    'route': Routes.Profile,
     'icon': null,
 }]
 

@@ -44,7 +44,6 @@ const LoginPage = ({ setUser }) => {
             getLogin({
                 variables: { email:data.email, password:data.password },
                 onCompleted:({authenticate}) => {
-                    console.log(authenticate)
                     setUser(authenticate)
                 }
             })

@@ -7,6 +7,7 @@ import isMedium from "../../../core/auth/utils";
 import { useAuth } from "../../Auth/AuthContainer";
 import { gql, useQuery } from "@apollo/client";
 import MissionAccept from "./MissionAccept";
+import Candidates from "../Profile/Candidates";
 
 function MissionsDetail() {
     
@@ -26,11 +27,12 @@ function MissionsDetail() {
 
     const {errorMediums, loading: loadingMediums, data: mediums} = useQuery(GET_MEDIUMS)
 
+    const { user } = useAuth();
     useEffect(() => {
         if(mediums !== undefined) {
             setUserIsMedium(isMedium(user, mediums.users))
         }
-    }, [data, mediums])
+    }, [data, mediums, user])
 
     const options = {
         weekday: 'short',
@@ -38,8 +40,6 @@ function MissionsDetail() {
         day: 'numeric',
         year: 'numeric',
     }
-
-    const { user } = useAuth();
 
     return (
         <>
@@ -67,7 +67,13 @@ function MissionsDetail() {
                                     <div className="row py-3">
                                         {data.entry.missionStatus}
                                         {
-                                            ((data.entry.missionStatus !== 'success') & (userIsMedium)) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
+                                            ((data.entry.missionStatus !== 'success') & (userIsMedium) & (parseInt(data.entry.authorId) !== parseInt(user.user.id))) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
+                                        }
+                                        {
+                                            ((parseInt(data.entry.authorId) === parseInt(user.user.id)) && data.entry.mediumQueue.length > 0) ? <Candidates/> : null
+                                        }
+                                        {
+                                            data.entry.assignedTo.length > 0 ? <Candidates accepted={data.entry.assignedTo}/> : null
                                         }
                                     </div>
                                 </div>
