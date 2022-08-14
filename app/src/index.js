@@ -24,14 +24,14 @@ const errorLink = onError(({ graphqlError, networkError}) => {
 
 const link = from([
   errorLink,
-  new HttpLink({uri:"http://localhost:8012/paranormax/web/api"})
+  new HttpLink({uri:"http://kodev.be/web/api"})
 ])
 
 const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: `Bearer ykOUDz5fdkRRUA9ewD-ZQTDXn1XIUq0E`
+      authorization: `Bearer ${process.env.REACT_APP_BEARER}`
     }
   }
 });
