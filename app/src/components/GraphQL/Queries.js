@@ -38,6 +38,7 @@ query GetMission($id: [QueryArgument]!){
       authorId
       author {
         username
+        email
         photo {
           url
         }
@@ -57,6 +58,7 @@ query GetMission($id: [QueryArgument]!){
       assignedTo {
         username,
         email
+        id
       }
     }
   }
@@ -88,6 +90,7 @@ query GetMissionsByUserId($id: [QueryArgument]!){
 				id
 			}
       assignedTo {
+        id
         username
       }
     }

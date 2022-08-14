@@ -38,7 +38,7 @@ function MissionsOverview() {
                                 <ul className="no-bulletpoints row gx-5">
                                     {
                                         data.entries.map((mission) => (
-                                            mission.missionStatus !== 'draft' && (
+                                            (mission.missionStatus !== 'draft' && !mission.denied) && (
                                                 <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
                                             )
                                         ))

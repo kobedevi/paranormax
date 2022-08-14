@@ -62,18 +62,20 @@ function MissionsDetail() {
                                         <img className="img-fluid rounded-circle author-pic" src={data.entry.author.photo ? data.entry.author.photo.url : "http://localhost:8012/paranormax/web/uploads/_336x336_crop_center-center_65_none/user.svg"} alt="..."/>
                                         <div className="ms-3">
                                             <div className="fw-bold">{data.entry.author.username}</div>
+                                            <div className="text-muted">{data.entry.author.email}</div>
                                         </div>
                                     </div>
                                     <div className="row py-3">
                                         {data.entry.missionStatus}
                                         {
-                                            ((data.entry.missionStatus !== 'success') & (userIsMedium) & (parseInt(data.entry.authorId) !== parseInt(user.user.id))) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
+                                            ((data.entry.missionStatus === 'pending' || 'searching') & (userIsMedium) & (parseInt(data.entry.authorId) !== parseInt(user.user.id))) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
                                         }
                                         {
                                             ((parseInt(data.entry.authorId) === parseInt(user.user.id)) && data.entry.mediumQueue.length > 0) ? <Candidates/> : null
                                         }
                                         {
-                                            data.entry.assignedTo.length > 0 ? <Candidates accepted={data.entry.assignedTo}/> : null
+                                            // if you're the author or accepted medium show this card
+                                            ((parseInt(data.entry.authorId) === parseInt(user.user.id)) || data.entry.assignedTo.some((medium) => parseInt(medium.id) === parseInt(user.user.id))) && data.entry.assignedTo.length > 0 ? <Candidates accepted={data.entry.assignedTo}/> : null
                                         }
                                     </div>
                                 </div>
