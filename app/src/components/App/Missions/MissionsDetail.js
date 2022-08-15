@@ -89,7 +89,6 @@ function MissionsDetail() {
                                         }
                                         {
                                             // if user is the author
-                                            // console.log(data.entry.missionStatus !== 'success' || data.entry.missionStatus !== 'failed'),
                                             ((parseInt(data.entry.authorId) === parseInt(user.user.id)) && (data.entry.missionStatus !== 'success' && data.entry.missionStatus !=='failed')) ? <FinishMission missionId={id}/> : null
                                         }
                                     </div>

@@ -4,7 +4,6 @@ import { ASSIGN_USER_ACCEPT } from "../../GraphQL/Mutations";
 
 const CandidateCard = ({medium, accepted=null}) => {
 
-    console.log(medium);
     const {id} = useParams()
     const [acceptUser] = useMutation(ASSIGN_USER_ACCEPT);
 
