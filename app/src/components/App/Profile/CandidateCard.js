@@ -2,8 +2,9 @@ import { useMutation } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import { ASSIGN_USER_ACCEPT } from "../../GraphQL/Mutations";
 
-const CandidateCard = ({medium, accepted}) => {
+const CandidateCard = ({medium, accepted=null}) => {
 
+    console.log(medium);
     const {id} = useParams()
     const [acceptUser] = useMutation(ASSIGN_USER_ACCEPT);
 
@@ -18,9 +19,6 @@ const CandidateCard = ({medium, accepted}) => {
             }
         })
     }
-
-    console.log(accepted);
-
 
     return(
         <aside className={accepted !== null ? "bg-success bg-gradient rounded-3 p-3 p-sm-3 mt-3 " : "bg-primary bg-gradient rounded-3 p-3 p-sm-3 mt-3 "}>

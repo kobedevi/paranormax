@@ -57,7 +57,9 @@ const MissionAccept = ({missionId, userId, mediumQueue}) => {
                 {
                     error && <Alert color="danger">{error.message}</Alert>
                 }
-                <button onClick={acceptOrDeny} disabled={buttonDisabled}>Cancel request</button>
+                <div class="d-grid p-0 pt-3">
+                    <button onClick={acceptOrDeny} disabled={buttonDisabled}class="btn btn-danger btn-lg" id="submitButton" type="submit">Cancel request</button>
+                </div>
             </>
         )
     } else {
@@ -66,7 +68,9 @@ const MissionAccept = ({missionId, userId, mediumQueue}) => {
                 {
                     error && <Alert color="danger">{error.message}</Alert>
                 }
-                <button onClick={acceptOrDeny} disabled={buttonDisabled}>Request mission</button>
+                <div class="d-grid p-0 pt-3">
+                    <button onClick={acceptOrDeny} disabled={buttonDisabled}class="btn btn-success btn-lg" id="submitButton" type="submit">Request mission</button>
+                </div>
             </>
         )
     }

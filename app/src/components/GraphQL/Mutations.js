@@ -47,3 +47,25 @@ mutation assignUser($missionId: ID!, $assignee: [Int]) {
     }
   }
 }`;
+
+export const SET_MISSION_SUCCESS = gql`
+mutation assignUser($missionId: ID!) {
+  save_missions_default_Entry(id: $missionId, missionStatus: "success") {
+    id,
+    ... on missions_default_Entry {
+      title
+      missionStatus
+    }
+  }
+}`;
+
+export const SET_MISSION_FAIL = gql`
+mutation assignUser($missionId: ID!) {
+  save_missions_default_Entry(id: $missionId, missionStatus: "failed") {
+    id,
+    ... on missions_default_Entry {
+      title
+      missionStatus
+    }
+  }
+}`;

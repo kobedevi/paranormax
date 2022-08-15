@@ -8,6 +8,8 @@ import { useAuth } from "../../Auth/AuthContainer";
 import { gql, useQuery } from "@apollo/client";
 import MissionAccept from "./MissionAccept";
 import Candidates from "../Profile/Candidates";
+import FinishMission from "../Profile/FinishMission";
+import MissionStatusTag from "../../Design/MissionStatusTag";
 
 function MissionsDetail() {
     
@@ -66,10 +68,16 @@ function MissionsDetail() {
                                         </div>
                                     </div>
                                     <div className="row py-3">
-                                        {data.entry.missionStatus}
+                                        {
+                                            data.entry.missionStatus && (
+                                                <div className="p-0">
+                                                    <MissionStatusTag status={data.entry.missionStatus}/>
+                                                </div>
+                                            )
+                                        }
                                         {
                                             // if not in state pending or searching, user is a medium and user is not the author
-                                            ((data.entry.missionStatus === 'pending' || 'searching') & (userIsMedium) & (parseInt(data.entry.authorId) !== parseInt(user.user.id))) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
+                                            ((data.entry.missionStatus === 'pending' || data.entry.missionStatus === 'searching') & (userIsMedium) & (parseInt(data.entry.authorId) !== parseInt(user.user.id))) ? <MissionAccept missionId={data.entry.id} userId={user.user.id} mediumQueue={data.entry.mediumQueue}/> : null
                                         }
                                         {
                                             // if user is the author and there are candidates
@@ -79,31 +87,36 @@ function MissionsDetail() {
                                             // if user is the author or the accepted medium
                                             ((parseInt(data.entry.authorId) === parseInt(user.user.id)) || data.entry.assignedTo.some((medium) => parseInt(medium.id) === parseInt(user.user.id))) && data.entry.assignedTo.length > 0 ? <Candidates accepted={data.entry.assignedTo}/> : null
                                         }
+                                        {
+                                            // if user is the author
+                                            // console.log(data.entry.missionStatus !== 'success' || data.entry.missionStatus !== 'failed'),
+                                            ((parseInt(data.entry.authorId) === parseInt(user.user.id)) && (data.entry.missionStatus !== 'success' && data.entry.missionStatus !=='failed')) ? <FinishMission missionId={id}/> : null
+                                        }
                                     </div>
                                 </div>
-                                    {
-                                        data && (
-                                            <div className="col-lg-9">
-                                                <article>
-                                                    <header className="mb-4">
-                                                        <h1 className="fw-bolder mb-1">{data.entry.title}</h1>
-                                                        <div className="text-muted fst-italic mb-2">{new Date(data.entry.deadline).toLocaleDateString('en-UK', options)}</div>
-                                                        {
-                                                            data.entry.tagField && (
-                                                                data.entry.tagField.map((tag) => (
-                                                                    <div key={tag.id} className="badge bg-secondary text-decoration-none link-light">{tag.title}</div>
-                                                                ))
-                                                            )
-                                                        }
-                                                    </header>
-                                                    <figure className="mb-4"><img className="img-fluid rounded" src={data.entry.missionImage[0] ? data.entry.missionImage[0].url : "http://kodev.be/web/uploads/_750x500_crop_center-center_65_none/spooky.jpg"} alt="..." /></figure>
-                                                    <section className="mb-5">
-                                                        <div dangerouslySetInnerHTML={{__html: data.entry.richText}}/>
-                                                    </section>
-                                                </article>
-                                            </div>
-                                        )
-                                    }
+                                {
+                                    data && (
+                                        <div className="col-lg-9">
+                                            <article>
+                                                <header className="mb-4">
+                                                    <h1 className="fw-bolder mb-1">{data.entry.title}</h1>
+                                                    <div className="text-muted fst-italic mb-2">{new Date(data.entry.deadline).toLocaleDateString('en-UK', options)}</div>
+                                                    {
+                                                        data.entry.tagField && (
+                                                            data.entry.tagField.map((tag) => (
+                                                                <div key={tag.id} className="badge bg-secondary text-decoration-none link-light">{tag.title}</div>
+                                                            ))
+                                                        )
+                                                    }
+                                                </header>
+                                                <figure className="mb-4"><img className="img-fluid rounded" src={data.entry.missionImage[0] ? data.entry.missionImage[0].url : "http://kodev.be/web/uploads/_750x500_crop_center-center_65_none/spooky.jpg"} alt="..." /></figure>
+                                                <section className="mb-5">
+                                                    <div dangerouslySetInnerHTML={{__html: data.entry.richText}}/>
+                                                </section>
+                                            </article>
+                                        </div>
+                                    )
+                                }
                             </div>
                         </div>
                     </section>
