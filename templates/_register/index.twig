@@ -20,13 +20,14 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5 box">
+                    <h2 class="mb-5">Register now</h2>
                     <form method="post" accept-charset="UTF-8">
                         {{ csrfInput() }}
                         {{ actionInput('users/save-user') }}
 
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="username">Username</label>
+                                <label for="username">{{'Username' |t}}</label>
                                 {{ input('text', 'username', user.username ?? null, {
                                     id: 'username',
                                     autocomplete: 'username',
@@ -38,7 +39,7 @@
 
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="first-name">First Name</label>
+                                <label for="first-name">{{'First Name' |t}}</label>
                                 {{ input('text', 'firstName', user.firstName ?? null, {
                                     id: 'first-name',
                                     autocomplete: 'given-name',
@@ -49,7 +50,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="last-name">Last Name</label>
+                                <label for="last-name">{{'Last Name' |t}}</label>
                                 {{ input('text', 'lastName', user.lastName ?? null, {
                                     id: 'last-name',
                                     autocomplete: 'family-name',
@@ -61,7 +62,7 @@
 
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="email">Email</label>
+                                <label for="email">{{'Email' |t}}</label>
                                 {{ input('email', 'email', user.email ?? null, {
                                     id: 'email',
                                     autocomplete: 'email',
@@ -72,7 +73,7 @@
                         </div>
                         <div class="row ">
                             <div class="col-md-12 form-group">
-                                <label for="password">Password</label>
+                                <label for="password">{{'Password'|t}}</label>
                                 {{ input('password', 'password', null, {
                                     id: 'password',
                                     class:"form-control "

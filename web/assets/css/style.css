@@ -177,7 +177,7 @@ section {
 }
 
 .header.header-scrolled {
-  background: #fff;
+  background: #012970;
   padding: 15px 0;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
@@ -195,7 +195,7 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #012970;
+  color: white;
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
@@ -231,7 +231,7 @@ section {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #013289;
+  color: white;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -290,6 +290,7 @@ section {
   font-size: 15px;
   text-transform: none;
   font-weight: 600;
+  color:#244CC1 ;
 }
 
 .navbar .dropdown ul a i {
@@ -341,6 +342,10 @@ section {
   display: none;
   line-height: 0;
   transition: 0.5s;
+}
+
+.header.header-scrolled .mobile-nav-toggle{
+  color: white;
 }
 
 .mobile-nav-toggle.bi-x {
@@ -1734,6 +1739,36 @@ img.cover {
 
 .contact .php-email-form input {
   padding: 10px 15px;
+}
+
+.contact input, .contact textarea {
+  display: block;
+	width: 100%;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: .375rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.contact button {
+  border: none;
+	margin-top: 30px;
+	line-height: 0;
+	padding: 22px 40px;
+	border-radius: 4px;
+	transition: 0.5s;
+	color: #fff;
+	background: #4154f1;
+	box-shadow: 0px 5px 30px rgb(65 84 241 / 40%);
 }
 
 .contact .php-email-form textarea {

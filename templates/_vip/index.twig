@@ -19,7 +19,6 @@
     <!-- End spacing -->
 
     <section id="recent-blog-posts" class="recent-blog-posts blog">
-
         <div class="container" data-aos="fade-up">
 
             <header class="section-header">
@@ -27,29 +26,45 @@
             </header>
             {% if not payments %}
                 <section class="site-section bg-light">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-5 box">
+                                <h2 class="mb-5">Make a payment to permanently access VIP content</h2>
+                                <form method="post">
+                                    {{ csrfInput() }}
+                                    {{ actionInput("mollie-payments/payment/pay") }}
+                                    {{ redirectInput("/web/") }}
+                                    <input type="hidden" name="amount" value="{{ 5|hash }}">
+                                    <input type="hidden" name="form" value="{{ 'formHandle'|hash }}">
 
-                    <form method="post">
-                        {{ csrfInput() }}
-                        {{ actionInput("mollie-payments/payment/pay") }}
-                        {{ redirectInput("/web/") }}
-                        <input type="hidden" name="amount" value="{{ 5|hash }}">
-                        <input type="hidden" name="form" value="{{ 'formHandle'|hash }}">
-
-                        <div>
-                            <label for="email">{{ "E-mail"|t }}</label>
-                            <input type="email" id="email" name="email" value="{{ currentUser.email }}">
+                                    <div class="row" style="margin-bottom:0">
+                                        <label for="email">{{ "E-mail"|t }}</label>
+                                        <div class="col-md-12 form-group">
+                                            <input class="form-control" type="email" id="email" name="email" value="{{ currentUser.email }}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom:0">
+                                        <label for="firstName">{{ "First name"|t }}</label>
+                                        <div class="col-md-12 form-group">
+                                            <input class="form-control" type="text" id="firstName" name="fields[firstName]" value="{{ currentUser.firstName }}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom:0">
+                                        <label for="lastName">{{ "Last name"|t }}</label>
+                                        <div class="col-md-12 form-group">
+                                            <input class="form-control" type="text" id="lastName" name="fields[lastName]" value="{{ currentUser.lastName }}">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row" style="margin-bottom:0">
+                                        <div class="col-md-6 form-group">
+                                            <input type="submit" value="{{ "Pay"|t }}" class="btn-get-started d-inline-flex align-items-center justify-content-center align-self-center">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div>
-                            <label for="firstName">{{ "First name"|t }}</label>
-                            <input type="text" id="firstName" name="fields[firstName]" value="{{ currentUser.firstName }}">
-                        </div>
-                        <div>
-                            <label for="lastName">{{ "Last name"|t }}</label>
-                            <input type="text" id="lastName" name="fields[lastName]" value="{{ currentUser.lastName }}">
-                        </div>
-
-                        <input type="submit" class="btn " value="{{ "Pay"|t }}">
-                    </form>
+                    </div>
                 </section>
             {% endif %}
 

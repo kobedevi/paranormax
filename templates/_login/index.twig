@@ -14,7 +14,7 @@
                         {{ actionInput('users/login') }}
 
                         <div class="row">
-                            <label for="loginName">Username</label>
+                            <label for="loginName">{{'Username or email'|t}}</label>
                             <div class="col-md-12 form-group">
                                 {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
                                     id: 'loginName',
@@ -23,9 +23,9 @@
                                 }) }}
                             </div>
                         </div>
-                        <div class="row mb-5">
+                        <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="password">Password</label>
+                                <label for="password">{{'Password'|t}}</label>
                                 {{ input('password', 'password', null, {
                                     id: 'password',
                                     class:"form-control "
@@ -34,7 +34,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input type="submit" value="Login" class="btn btn-primary">
+                                <input type="submit" value="Login" class="btn-get-started d-inline-flex align-items-center justify-content-center align-self-center">
                             </div>
                         </div>
                         {% if errorMessage is defined %}
