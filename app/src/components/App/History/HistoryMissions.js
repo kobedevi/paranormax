@@ -56,22 +56,25 @@ const HistoryMissions = () => {
                             <div>
                                 {
                                     data && (
-                                        <ul className="no-bulletpoints row gx-5">
-                                            {
-                                                filteredArray.map((mission) => (
-                                                    (mission.missionStatus !== 'draft' && !mission.denied) && (
-                                                        <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
-                                                    )
-                                                ))
+                                        <>
+                                            {filteredArray.length === 0 ? <Alert color="info">You haven't participated in any missions</Alert> : 
+                                                <ul className="no-bulletpoints row gx-5">
+                                                    {
+                                                        filteredArray.map((mission) => (
+                                                            (mission.missionStatus !== 'draft' && !mission.denied) && (
+                                                                <li className="col-lg-4 mb-5" key={mission.id}><MissionCard mission={mission}/></li>
+                                                            )
+                                                        ))
+                                                    }
+                                                </ul>
                                             }
-                                        </ul>
+                                        </>
                                     )
                                 }
                             </div>
                         </div>
                     </section>
                 )
-
             }
         </ul>
     )
